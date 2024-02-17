@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0jTPskIApw9x+rCHnPxAA5prv0BZE9XULPq80pFlBS+DqKNEDAwFzvIvgB4QecprHw8dG62zz1q2hYnOxrAi7g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NABIL NKHILI\\source\\repos\\App_git\\App_git\\App_git.iOS\\App_git.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
