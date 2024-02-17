@@ -1,0 +1,71 @@
+# Fichiers de build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Fichiers de packages
+*.nupkg
+*.snupkg
+
+# Fichiers de backup générés par les éditeurs de texte
+*~
+*.swp
+*.swo
+*.bak
+*.orig
+
+# Fichiers de cache local pour les dépendances de NuGet
+packages/
+
+# Fichiers de cache de l'IDE (Visual Studio)
+.vs/
+.vscode/
+*.user
+*.userprefs
+*.suo
+
+# Dossiers générés par les outils Xamarin
+*.local/
+
+# Dossier de cache Mono
+.mono/
+.mono_temp/
+
+# Fichiers de configuration spécifiques au développeur
+*.csproj
+*.sln
+
+# Fichiers de ressources générés
+Resources/Resource.Designer.cs
+Resource.designer.cs
+
+# Fichiers de journalisation
+*.log
+
+# Fichiers de crash report
+*.dmp
+*.dump
+
+# Fichiers de sortie
+*.apk
+*.aar
+*.app
+*.ipa
+
+# Autres fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de secrets (contenant souvent des clés API ou d'autres informations sensibles)
+*.keystore
+*.p12
+*.key
+*.mobileprovision
+*.plist
+
+# Dossier contenant les outils de développement tiers
+.tools/
+
+# Fichiers de config spécifiques à l'application
+app.config
