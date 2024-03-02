@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.Depart">
+    <StackLayout>
+        <Label Text="Sélectionnez une ville:"/>
+        <Picker ItemsSource="{Binding Villes}" SelectedIndexChanged="OnPickerSelectedIndexChanged"/>
+    </StackLayout>
+</ContentView>

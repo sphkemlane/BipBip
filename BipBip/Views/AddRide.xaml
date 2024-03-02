@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BipBip.Views"
+             x:Class="BipBip.Views.AddRide">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid BackgroundColor="white">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Partie avant le formulaire -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="file.png" WidthRequest="50" HeightRequest="100" Grid.Column="0" Margin="80,0,0,0"/>
+                <Image Source="splash1.png" WidthRequest="50" HeightRequest="50" Grid.Column="1" Margin="80,-60,0,0"/>
+            </Grid>
+
+            <!-- Formulaire -->
+            
+                <StackLayout BackgroundColor="White" Grid.Row="1" Margin="0,50,0,0">
+                    <!-- Votre formulaire ici -->
+                    <local:Depart />
+                    <local:Arrivee Margin="0,40,0,0"/>
+                    <local:HeureDepart Margin="0,40,0,0"/>
+                    <local:HeureArrivee Margin="0,80,0,0"/>
+                    <Button Text="Valider" WidthRequest="150" HorizontalOptions="Center" Margin="0,80,0,0"/>
+                </StackLayout>
+            
+
+            <!-- Partie sous le formulaire -->
+            <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="White" Margin="200,0,0,0">
+                <!-- Images liens vers les réseaux sociaux -->
+                <Image Source="fb.png" WidthRequest="50" HeightRequest="40">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFacebookTapped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                <Image Source="instagram.png" WidthRequest="50" HeightRequest="40">
+                    <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnInstagramTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="twitter.png" WidthRequest="50" HeightRequest="40">
+                    <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTwitterTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

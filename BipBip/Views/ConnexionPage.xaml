@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.ConnexionPage">
+  
+      <StackLayout VerticalOptions="CenterAndExpand" Padding="20" BackgroundColor="White">
+        <Entry Placeholder="Email" x:Name="emailEntry"/>
+        <Entry Placeholder="Password" x:Name="passwordEntry" IsPassword="True"/>
+        <Button Text="se connecter" Clicked="OnLoginButtonClicked"/>
+        <Label Text="Vous n'avez pas de compte? S'inscrire">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLabelTapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
