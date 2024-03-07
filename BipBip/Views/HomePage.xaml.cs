@@ -29,9 +29,10 @@ namespace BipBip.Views
             await Navigation.PushAsync(new PreferencesPage());
         }
 
-        private async void OnAVClicked(object sender, EventArgs e)
+        private async void OnAddCarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddRide());
+            Vehicule vehicule = new Vehicule();
+            await Navigation.PushAsync(new AddCarPage1(vehicule));
         }
 
         private async void OnATClicked(object sender, EventArgs e)

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.AddCarPage1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout BackgroundColor="White">
+        <!--  Bouton pour annuler et revenir à la page principale  -->
+        <Button Clicked="OnEscapeButtonClicked" Text="Échapper (x)" />
+
+        <Label
+            HorizontalOptions="CenterAndExpand"
+            Text="Ajouter une voiture - Page 1"
+            VerticalOptions="CenterAndExpand" />
+
+        <Entry x:Name="ImmatriculationEntry" Placeholder="Numéro d'immatriculation" />
+
+        <!--  Bouton pour passer à la page suivante  -->
+        <Button Clicked="OnNextButtonClicked" Text="Suivant" />
+    </StackLayout>
+</ContentPage>

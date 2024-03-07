@@ -60,3 +60,9 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.dll
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage1.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage2.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage3.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage4.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage5.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage6.xaml.g.cs

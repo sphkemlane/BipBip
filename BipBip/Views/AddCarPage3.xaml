@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.AddCarPage3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout BackgroundColor="White">
+        <Button Clicked="OnPreviousButtonClicked" Text="←" />
+
+        <Label
+            HorizontalOptions="CenterAndExpand"
+            Text="Ajouter une voiture - Page 3"
+            VerticalOptions="CenterAndExpand" />
+
+        <Entry x:Name="MarqueVoitureEntry" Placeholder="Marque de voiture" />
+
+        <Button Clicked="OnNextButtonClicked" Text="Suivant" />
+    </StackLayout>
+</ContentPage>

@@ -7,7 +7,7 @@ using BipBip.Models;
 using SQLite;
 using System.Threading.Tasks;
 
-namespace BipBipApp.Repositories
+namespace BipBip.Repositories
 {
     public class VehiculeRepo
     {
