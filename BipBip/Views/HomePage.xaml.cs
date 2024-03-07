@@ -24,6 +24,20 @@ namespace BipBip.Views
             welcomeLabel.Text = $"Bienvenue, {UserSession.FirstName} {UserSession.UserName} sur votre espace utilisateur";
         }
 
+        private async void OnCTClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PreferencesPage());
+        }
+
+        private async void OnAVClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddRide());
+        }
+
+        private async void OnATClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddRide());
+        }
         private void Deconnexion(object sender, EventArgs e)
         {
             UserSession.EndSession();

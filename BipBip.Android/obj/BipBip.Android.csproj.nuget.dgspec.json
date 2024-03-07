@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.Android\\BipBip.Android.csproj": {}
+    "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.Android\\BipBip.Android.csproj": {
+    "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
+        "projectUniqueName": "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
         "projectName": "BipBip.Android",
-        "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
+        "projectPath": "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
         "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.Android\\obj\\",
+        "outputPath": "D:\\Projets\\BipBip\\BipBip.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj": {
-                "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj"
+              "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
+                "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj"
               }
             }
           }
@@ -47,6 +47,14 @@
       "frameworks": {
         "monoandroid13.0": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -54,19 +62,23 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj": {
+    "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj",
+        "projectUniqueName": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
         "projectName": "BipBip",
-        "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj",
+        "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
         "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\obj\\",
+        "outputPath": "D:\\Projets\\BipBip\\BipBip\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio partagé\\NuGetPackages"
@@ -111,6 +123,14 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -118,6 +138,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [

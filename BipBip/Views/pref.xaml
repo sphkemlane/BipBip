@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.PreferencesPage"
+             BackgroundColor="#FFFFFF">
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="20" Spacing="20" VerticalOptions="Start">
+
+            <!-- Titre de la section -->
+            <Label Text="Sélectionnez vos préférences de covoiturage" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"/>
+
+            <!-- Préférence pour fumer -->
+            <CheckBox x:Name="SmokingPreference" IsChecked="{Binding Smoking, Mode=TwoWay}" Color="#007AFF"/>
+            <Label Text="Fumeur" />
+
+            <!-- Préférence pour la musique -->
+            <CheckBox x:Name="MusicPreference" IsChecked="{Binding Music, Mode=TwoWay}"  Color="#007AFF"/>
+            <Label Text="Musique" />
+
+            <!-- Préférence pour la discussion -->
+            <CheckBox x:Name="ConversationPreference" IsChecked="{Binding Conversation, Mode=TwoWay}" Color="#007AFF"/>
+            <Label Text="Discussion" />
+
+            <!-- Préférence pour manger -->
+            <CheckBox x:Name="EatingPreference" IsChecked="{Binding Eating, Mode=TwoWay}" Color="#007AFF"/>
+            <Label Text="Manger" />
+
+            <!-- Bouton de confirmation -->
+            <Button Text="Enregistrer les préférences" 
+                    Command="{Binding SavePreferencesCommand}" 
+                    BackgroundColor="#007AFF" 
+                    TextColor="White" 
+                    CornerRadius="20"
+                    Margin="0,20,0,0"/>
+
+
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+
+    

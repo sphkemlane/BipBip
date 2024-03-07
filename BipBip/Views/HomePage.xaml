@@ -4,10 +4,38 @@
              x:Class="BipBip.Views.HomePage"
              BackgroundColor="White">
 
-    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <Label Text="Bienvenue sur votre espace utilisateur" FontSize="Large" HorizontalOptions="Center"/>
-        <Label x:Name="welcomeLabel" HorizontalOptions="Center" FontSize="Medium"/>
-        <Button Text="Déconnexion" Clicked="Deconnexion" HorizontalOptions="Center" Margin="0,20"/>
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackLayout Grid.Row="0" Orientation="Horizontal" BackgroundColor="LightGray" Padding="10,5" HeightRequest="40">
+            <Label Text="Modifier Preferences" VerticalOptions="Center" Margin="0,0,20,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCTClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Ajouter Voiture" VerticalOptions="Center" Margin="0,0,20,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAVClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Ajouter voiture" VerticalOptions="Center" Margin="0,0,20,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnATClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+        <!-- Content -->
+        <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Bienvenue sur votre espace utilisateur" FontSize="Large" HorizontalOptions="Center"/>
+            <Label x:Name="welcomeLabel" HorizontalOptions="Center" FontSize="Medium"/>
+            <Button Text="Déconnexion" Clicked="Deconnexion" HorizontalOptions="Center" Margin="0,20"/>
+            
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

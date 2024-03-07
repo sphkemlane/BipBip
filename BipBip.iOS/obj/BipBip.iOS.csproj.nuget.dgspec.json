@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj": {}
+    "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj": {
+    "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+        "projectUniqueName": "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
         "projectName": "BipBip.iOS",
-        "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+        "projectPath": "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
         "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip.iOS\\obj\\",
+        "outputPath": "D:\\Projets\\BipBip\\BipBip.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj": {
-                "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj"
+              "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
+                "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj"
               }
             }
           }
@@ -47,6 +47,14 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -54,6 +62,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           }
         }
@@ -73,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj": {
+    "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj",
+        "projectUniqueName": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
         "projectName": "BipBip",
-        "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\BipBip.csproj",
+        "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
         "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saad KEMLANE\\Desktop\\BipBip\\BipBip\\obj\\",
+        "outputPath": "D:\\Projets\\BipBip\\BipBip\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio partagé\\NuGetPackages"
@@ -125,6 +137,14 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -132,6 +152,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [

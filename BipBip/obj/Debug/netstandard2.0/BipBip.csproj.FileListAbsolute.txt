@@ -1,0 +1,62 @@
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.csproj.AssemblyReference.cache
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddRide.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Arrivee.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ConnexionPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Depart.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureArrivee.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureDepart.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\pref.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RegidterPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RideChoicePage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.AssemblyInfoInputs.cache
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.AssemblyInfo.cs
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.csproj.CoreCompileInputs.cache
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.deps.json
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.dll
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\bin\Debug\netstandard2.0\ref\BipBip.dll
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.pdb
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.dll
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
+C:\Users\Saad KEMLANE\Desktop\BipBip\BipBip\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb
+D:\Projets\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.deps.json
+D:\Projets\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.dll
+D:\Projets\BipBip\BipBip\bin\Debug\netstandard2.0\ref\BipBip.dll
+D:\Projets\BipBip\BipBip\bin\Debug\netstandard2.0\BipBip.pdb
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.csproj.AssemblyReference.cache
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddRide.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Arrivee.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ConnexionPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Depart.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureArrivee.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureDepart.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\pref.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RegidterPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RideChoicePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.AssemblyInfoInputs.cache
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.AssemblyInfo.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.csproj.CoreCompileInputs.cache
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.sourcelink.json
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.dll
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb

@@ -45,6 +45,8 @@ namespace BipBip.Views
             };
 
             var existEmail = await database.GetUserByEmailAsync(user.Email);
+            if (!verifEmail() || !verifNomPrenom() || !verifNumero())
+                return;
             if (existEmail == null)
             {
                 await database.SaveUserAsync(user);
@@ -59,5 +61,35 @@ namespace BipBip.Views
             var users = await database.GetUserAsync();
             await DisplayAlert("Verif", $"{users.Count}", "Ok");
         }
+
+        private bool verifEmail() 
+        {
+            if(!Regex.IsMatch(emailEntry.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                DisplayAlert("Error", "Veuillez saisir un email valide", "OK");
+                return false;
+            }
+            return true;
+        }
+        private bool verifNomPrenom()
+        {
+            if (!Regex.IsMatch(prenomEntry.Text, @"^[a-zA-Z]") || !Regex.IsMatch(nameEntry.Text, @"^[a-zA-Z]"))
+            {
+                DisplayAlert("Error", "le format du prénom saisi est incorrect", "OK");
+                return false;
+            }
+            return true;
+        }
+
+        private bool verifNumero()
+        {
+            if (!Regex.IsMatch(phoneEntry.Text, @"^[0-9]") || (phoneEntry.Text.Length > 10 || phoneEntry.Text.Length < 10))
+            {
+                DisplayAlert("Error", "veuillez saisir un numéro de téléphone correct", "OK");
+                return false;
+            }
+            return true;
+        }
     }
+
 }
