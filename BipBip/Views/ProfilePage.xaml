@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.ProfilePage"
+             BackgroundColor="#E8EAF6">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+
+                <!-- En-tête de la page avec bouton de retour -->
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="&#x3C;" FontSize="Large" />
+                    <Label Text="À propos de vous" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Text="Compte" HorizontalOptions="End" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <!-- Section de la photo de profil -->
+                <StackLayout Padding="15" HorizontalOptions="Center">
+                    <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                        <StackLayout HorizontalOptions="Center">
+                            
+                            <Image Source="nabilz.PNG" HeightRequest="100" WidthRequest="100" />
+                            
+
+
+                            <Label x:Name="welcomeLabel" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                            <Label Text="Débutant" HorizontalTextAlignment="Center" TextColor="Gray"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Modifier la photo de profil" Margin="5"/>
+                </StackLayout>
+
+                <!-- Section des informations personnelles -->
+                <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                    <StackLayout>
+                        <Entry Placeholder="Nom" x:Name="LabelNom" />
+                        <Entry Placeholder="Prénom" x:Name="LabelPrénom" />
+                        <Entry Placeholder="Numéro de téléphone" Text="+33 0 00 00 00 00" />
+                        <Entry Placeholder="Adresse" Text="42 Rue de la résistance, Saint Étienne" />
+                        <Entry Placeholder="User ID" Text="RANDOM_212" IsEnabled="False" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Section de l'email et du mot de passe -->
+                <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                    <StackLayout>
+                        <Label x:Name="LabelEmail"/>
+                        <Label Text="Mot de passe: ********" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Boutons de vérification -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Vérifier une pièce d'identité" />
+                    <Label Text="✓" TextColor="Green" FontSize="Large" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Padding="15" Spacing="10">
+
+
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Button Text="+" Command="{Binding AddBioCommand}" />
+                        <!--<Label Text="Ajouter une minibio" VerticalOptions="Center" />-->
+
+                        <Label  Text="{Binding UserBio}" />
+
+                        <!-- Assurez-vous de lier AddBioCommand à une commande dans votre ViewModel -->
+                    </StackLayout>
+
+                    
+
+                </StackLayout>
+
+
+
+                <!-- Bouton pour enregistrer les modifications -->
+                <Button Text="Enregistrer les modifications" Margin="10"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

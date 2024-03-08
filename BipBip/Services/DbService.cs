@@ -40,5 +40,14 @@ namespace BipBip.Services
         }
 
 
+        //--
+        public async Task<string> GetUserEmailByUsernameAsync(string username)
+        {
+            var user = await _connection.Table<User>().Where(x => x.Name == username).FirstOrDefaultAsync();
+            return user?.Email;
+        }
+
+
+
     }
 }

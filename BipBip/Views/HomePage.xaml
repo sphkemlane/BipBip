@@ -42,6 +42,17 @@
                     <TapGestureRecognizer Tapped="OnATClicked" />
                 </Label.GestureRecognizers>
             </Label>
+            
+            <!--nabil-->
+            <Label
+                Margin="0,0,20,0"
+                Text="Mon profile"
+                VerticalOptions="Center">
+                   <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMyProfile" />
+                </Label.GestureRecognizers>
+            </Label>
+            <!--nabil-->
         </StackLayout>
 
         <!--  Content  -->

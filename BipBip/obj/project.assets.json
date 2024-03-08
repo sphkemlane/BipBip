@@ -956,23 +956,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\": {},
-    "D:\\Visual Studio partagé\\NuGetPackages": {}
+    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
+      "projectUniqueName": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip\\BipBip.csproj",
       "projectName": "BipBip",
-      "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj",
-      "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-      "outputPath": "D:\\Projets\\BipBip\\BipBip\\obj\\",
+      "projectPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip\\BipBip.csproj",
+      "packagesPath": "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Visual Studio partagé\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Saad KEMLANE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NABIL NKHILI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -994,11 +994,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1043,7 +1038,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

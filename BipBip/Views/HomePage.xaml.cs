@@ -39,6 +39,15 @@ namespace BipBip.Views
         {
             await Navigation.PushAsync(new AddRide());
         }
+
+        //nabil
+
+        private async void OnMyProfile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage());
+        }
+
+        //--------------nabil
         private void Deconnexion(object sender, EventArgs e)
         {
             UserSession.EndSession();
