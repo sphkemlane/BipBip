@@ -3,7 +3,8 @@
     x:Class="BipBip.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="White">
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -36,27 +37,17 @@
             </Label>
             <Label
                 Margin="0,0,20,0"
-                Text="Publier Trajet"
+                Text="Envoyer Message"
                 VerticalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnATClicked" />
+                    <TapGestureRecognizer Tapped="OnMPClicked" />
                 </Label.GestureRecognizers>
             </Label>
             
-            <!--nabil-->
-            <Label
-                Margin="0,0,20,0"
-                Text="Mon profile"
-                VerticalOptions="Center">
-                   <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnMyProfile" />
-                </Label.GestureRecognizers>
-            </Label>
-            <!--nabil-->
         </StackLayout>
 
         <!--  Content  -->
-        <StackLayout
+        <StackLayout x:Name="vListLayout"
             Grid.Row="1"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand">

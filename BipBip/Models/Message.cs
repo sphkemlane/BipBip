@@ -5,24 +5,15 @@ using System.Text;
 
 namespace BipBip.Models
 {
+    [Table("Message")]
     public class Message
     {
         [PrimaryKey, AutoIncrement]
-        public long Id { get; set; }
-
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public string Content { get; set; }
         public string Status { get; set; }
-        public long SenderId { get; set; }
-        public long ReceiverId { get; set; }
-
-        public Message()
-        {
-        }
-
-        public Message(string content)
-        {
-            Content = content;
-        }
+        public int UserIdSender { get; set; }
+        public int UserIdReceiver { get; set; }
     }
 }

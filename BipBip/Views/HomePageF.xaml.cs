@@ -18,31 +18,34 @@ namespace BipBip.Views
             InitializeComponent();
         }
 
-
-        private async void OnCTClicked(object sender, EventArgs e)
+        private async void OnPublierButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PreferencesPage());
-        }
-
-        private async void OnAddCarClicked(object sender, EventArgs e)
-        {
-            Vehicule vehicule = new Vehicule();
-            await Navigation.PushAsync(new AddCarPage1(vehicule));
-        }
-
-        private async void OnATClicked(object sender, EventArgs e)
-        {
+            // Effectuez la redirection vers la page AddRide
             await Navigation.PushAsync(new AddRide());
         }
 
-        //nabil
-
-        private async void OnMyProfile(object sender, EventArgs e)
+        private async void OnProfilButtonClicked(object sender, EventArgs e)
         {
+            // Effectuez la redirection vers la page Profil
             await Navigation.PushAsync(new ProfilePage());
         }
 
-        //--------------nabil
+        private async void OnMesTrajetsButtonClicked(object sender, EventArgs e)
+        {
+            // Effectuez la redirection vers la page MesTrajets
+            await Navigation.PushAsync(new MesTrajets());
+        }
+
+        private async void OnMessagesButtonClicked(object sender, EventArgs e)
+        {
+            // Effectuez la redirection vers la page MesReservations
+            await Navigation.PushAsync(new MessagePage());
+        }
+
+        
+
+        //deconnexion a mettre dans mon profil
+
         private void Deconnexion(object sender, EventArgs e)
         {
             UserSession.EndSession();

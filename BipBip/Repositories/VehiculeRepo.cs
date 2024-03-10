@@ -54,5 +54,10 @@ namespace BipBip.Repositories
             }
             return new List<Vehicule>();
         }
+
+        public async Task<List<Vehicule>> GetVehiculeByUserIdAsync(int id)
+        {
+            return await _connection.Table<Vehicule>().Where(x => x.Owner == id).ToListAsync();
+        }
     }
 }

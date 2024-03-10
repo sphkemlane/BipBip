@@ -1,21 +1,22 @@
-﻿using BipBip.ViewModels;
+﻿using BipBip.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace BipBip.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class MesTrajets : ContentPage
     {
-        public LoginPage()
+        public MesTrajets()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
         }
+
     }
 }

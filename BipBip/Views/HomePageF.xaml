@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
-    BackgroundColor="White">
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
 
@@ -136,9 +137,10 @@
                         Text="Acceuil"
                         VerticalOptions="End" />
 
-                    <Image
+                    <ImageButton
                         Grid.Column="1"
                         Margin="0,0,0,15"
+                        Clicked="OnPublierButtonClicked"
                         HeightRequest="28"
                         HorizontalOptions="Center"
                         Source="publier_1.png"
@@ -150,9 +152,10 @@
                         Text="Publier"
                         VerticalOptions="End" />
 
-                    <Image
+                    <ImageButton
                         Grid.Column="2"
                         Margin="0,0,0,15"
+                        Clicked="OnMesTrajetsButtonClicked"
                         HeightRequest="28"
                         HorizontalOptions="Center"
                         Source="historique.png"
@@ -164,9 +167,10 @@
                         Text="Vos trajets"
                         VerticalOptions="End" />
 
-                    <Image
+                    <ImageButton
                         Grid.Column="3"
                         Margin="0,0,0,15"
+                        Clicked="OnMessagesButtonClicked"
                         HeightRequest="28"
                         HorizontalOptions="Center"
                         Source="messages.png"
@@ -178,9 +182,10 @@
                         Text="Messages"
                         VerticalOptions="End" />
 
-                    <Image
+                    <ImageButton
                         Grid.Column="4"
                         Margin="0,0,0,15"
+                        Clicked="OnProfilButtonClicked"
                         HeightRequest="28"
                         HorizontalOptions="Center"
                         Source="profil.png"

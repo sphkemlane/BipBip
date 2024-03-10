@@ -22,8 +22,9 @@ namespace BipBip.Services
             User user = await _dbService.GetUserByEmailAsync(email);
             if (user != null && user.Password == password)
             {
-                UserSession.StartSession(user.Name, user.FirstName);
-                return true; 
+                int id = user.Id;
+                UserSession.StartSession(user.Name, user.FirstName, id);
+                return true;
             }
 
             // si l'utilisateur n'existe pas on renvoie faux

@@ -10,11 +10,14 @@ namespace BipBip.Models
         public static string UserName { get; private set; }
         public static string FirstName { get; private set; }
 
-        public static void StartSession(string userName, string firstName)
+        public static int Id { get; private set; }
+
+        public static void StartSession(string userName, string firstName, int Id)
         {
             UserName = userName;
             FirstName = firstName;
             IsLoggedIn = true;
+            Id = Id;
         }
 
         public static void EndSession() 
@@ -22,6 +25,7 @@ namespace BipBip.Models
             UserName = null;
             FirstName = null;
             IsLoggedIn = false;
+            Id = -1;
         }
     }
 }

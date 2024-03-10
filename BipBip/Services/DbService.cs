@@ -17,7 +17,7 @@ namespace BipBip.Services
             _connection.CreateTableAsync<User>().Wait();
         }
 
-        public Task<List<User>> GetUserAsync() 
+        public Task<List<User>> GetUserAsync()
         {
             return _connection.Table<User>().ToListAsync();
         }
@@ -39,7 +39,6 @@ namespace BipBip.Services
             return _connection.Table<User>().Where(x => x.Email == email).FirstOrDefaultAsync();
         }
 
-
         //--
         public async Task<string> GetUserEmailByUsernameAsync(string username)
         {
@@ -47,7 +46,16 @@ namespace BipBip.Services
             return user?.Email;
         }
 
+        public Task<List<Vehicule>> GetVehiculesAsync()
+        {
+            return _connection.Table<Vehicule>().ToListAsync();
+        }
 
+        //Methode pour recuperer l'utilisateur par son id
+        public Task<User> GetUserByIdAsync(int id)
+        {
+            return _connection.Table<User>().Where(x => x.Id == id).FirstOrDefaultAsync();
+        }
 
     }
 }

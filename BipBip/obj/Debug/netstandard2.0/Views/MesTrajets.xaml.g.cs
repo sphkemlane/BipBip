@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BipBip.Views.LoginPage.xaml", "Views/LoginPage.xaml", typeof(global::BipBip.Views.LoginPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BipBip.Views.MesTrajets.xaml", "Views/MesTrajets.xaml", typeof(global::BipBip.Views.MesTrajets))]
 
 namespace BipBip.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\LoginPage.xaml")]
-    public partial class LoginPage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\MesTrajets.xaml")]
+    public partial class MesTrajets : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MesTrajets));
         }
     }
 }

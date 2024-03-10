@@ -17,5 +17,7 @@ namespace BipBip.Models
         public string Modele { get; set; }
         public string Couleur { get; set; }
         public int AnneeImmatriculation { get; set; }
+
+        public int Owner { get; set; }
     }
 }

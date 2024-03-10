@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="BipBip.Views.AddCarPage6"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
 
     <StackLayout BackgroundColor="White">
         <Button Clicked="OnPreviousButtonClicked" Text="←" />

@@ -86,16 +86,11 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage4.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage5.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage6.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddRide.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Arrivee.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ConnexionPage.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Depart.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureArrivee.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HeureDepart.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePageF.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\pref.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ProfilePage.xaml.g.cs
@@ -109,3 +104,5 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.dll
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MessagePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MesTrajets.xaml.g.cs
