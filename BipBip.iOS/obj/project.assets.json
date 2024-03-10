@@ -2062,24 +2062,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\": {},
+    "D:\\Visual Studio partagé\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+      "projectUniqueName": "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
       "projectName": "BipBip.iOS",
-      "projectPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
-      "packagesPath": "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip.iOS\\obj\\",
+      "projectPath": "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+      "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
+      "outputPath": "D:\\Projets\\BipBip\\BipBip.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Visual Studio partagé\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\NABIL NKHILI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Saad KEMLANE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2093,11 +2093,16 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip\\BipBip.csproj": {
-              "projectPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\BipBip\\BipBip\\BipBip.csproj"
+            "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
+              "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj"
             }
           }
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.HomePageF"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    BackgroundColor="White">
+
+    <ContentPage.Content>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+
+            <!--  Background image for the top half  -->
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFill"
+                Source="home.png" />
+
+            <!--  Overlapping box that contains the form  -->
+            <Frame
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="15,30"
+                Padding="20"
+                BackgroundColor="White"
+                CornerRadius="20"
+                HasShadow="True"
+                HorizontalOptions="Fill"
+                TranslationY="-20"
+                VerticalOptions="CenterAndExpand">
+
+                <StackLayout Spacing="15">
+                    <!--  Entry for Departure with icon  -->
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image
+                            HeightRequest="24"
+                            Source="Arrivee.png"
+                            VerticalOptions="Center"
+                            WidthRequest="24" />
+                        <Entry
+                            x:Name="DepartureEntry"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Départ" />
+                        <!--  Fill the width  -->
+                    </StackLayout>
+
+                    <!--  Entry for Destination with icon  -->
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Image
+                            HeightRequest="24"
+                            Source="Arrivee.png"
+                            VerticalOptions="Center"
+                            WidthRequest="24" />
+                        <Entry
+                            x:Name="DestinationEntry"
+                            FontSize="18"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Destination" />
+                        <!--  Fill the width  -->
+                    </StackLayout>
+
+                    <!--  DatePicker and Entry for Passenger Count on the same line  -->
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <DatePicker
+                            x:Name="DatePicker"
+                            Date="{x:Static system:DateTime.Today}"
+                            Format="D"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                        <Image
+                            HeightRequest="24"
+                            Source="profil.png"
+                            VerticalOptions="Center"
+                            WidthRequest="24" />
+                        <Entry
+                            x:Name="PassengerCountEntry"
+                            Margin="0,0,20,0"
+                            FontSize="18"
+                            HorizontalOptions="End"
+                            Keyboard="Numeric"
+                            Placeholder="1"
+                            WidthRequest="70" />
+                    </StackLayout>
+
+
+                    <!--  Search Button  -->
+                    <Button
+                        x:Name="SearchButton"
+                        Margin="0,0,0,0"
+                        BackgroundColor="#007AFF"
+                        CornerRadius="10"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Rechercher"
+                        TextColor="White"
+                        VerticalOptions="End" />
+
+                </StackLayout>
+
+            </Frame>
+            <StackLayout
+                Grid.Row="1"
+                BackgroundColor="White"
+                HeightRequest="60"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="End">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  Icons with labels, adjusted size  -->
+                    <Image
+                        Grid.Column="0"
+                        Margin="0,0,0,15"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        Source="file.png"
+                        WidthRequest="28" />
+                    <Label
+                        Grid.Column="0"
+                        Margin="0,0,0,5"
+                        HorizontalOptions="Center"
+                        Text="Acceuil"
+                        VerticalOptions="End" />
+
+                    <Image
+                        Grid.Column="1"
+                        Margin="0,0,0,15"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        Source="publier_1.png"
+                        WidthRequest="28" />
+                    <Label
+                        Grid.Column="1"
+                        Margin="0,0,0,5"
+                        HorizontalOptions="Center"
+                        Text="Publier"
+                        VerticalOptions="End" />
+
+                    <Image
+                        Grid.Column="2"
+                        Margin="0,0,0,15"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        Source="historique.png"
+                        WidthRequest="28" />
+                    <Label
+                        Grid.Column="2"
+                        Margin="0,0,0,5"
+                        HorizontalOptions="Center"
+                        Text="Vos trajets"
+                        VerticalOptions="End" />
+
+                    <Image
+                        Grid.Column="3"
+                        Margin="0,0,0,15"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        Source="messages.png"
+                        WidthRequest="28" />
+                    <Label
+                        Grid.Column="3"
+                        Margin="0,0,0,5"
+                        HorizontalOptions="Center"
+                        Text="Messages"
+                        VerticalOptions="End" />
+
+                    <Image
+                        Grid.Column="4"
+                        Margin="0,0,0,15"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        Source="profil.png"
+                        WidthRequest="28" />
+                    <Label
+                        Grid.Column="4"
+                        Margin="0,0,0,5"
+                        HorizontalOptions="Center"
+                        Text="Profil"
+                        VerticalOptions="End" />
+                </Grid>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

@@ -56,4 +56,10 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\HomePageF.xaml.cs">
+      <DependentUpon>HomePageF.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

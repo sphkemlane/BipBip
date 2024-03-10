@@ -162,5 +162,18 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\nabilz.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\historique.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\messages.png" />
+    <AndroidResource Include="Resources\drawable\profil.png" />
+    <AndroidResource Include="Resources\drawable\publier_1.png" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable\historique.jpg" />
+    <Content Include="Resources\drawable\profil.jpg" />
+    <AndroidResource Include="Resources\drawable\publier.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

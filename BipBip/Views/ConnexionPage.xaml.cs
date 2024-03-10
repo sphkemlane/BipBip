@@ -30,7 +30,7 @@ namespace BipBip.Views
 
             if (isAuthenticated)
             {
-                await Navigation.PushAsync(new HomePage());
+                await Navigation.PushAsync(new HomePageF());
             }
             else
             {
