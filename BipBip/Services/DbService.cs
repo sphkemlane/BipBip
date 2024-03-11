@@ -57,5 +57,11 @@ namespace BipBip.Services
             return _connection.Table<User>().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
+        //Methode pour recuperer le vehicule par son id
+        public Task<Vehicule> GetVehiculeByIdAsync(int id)
+        {
+            return _connection.Table<Vehicule>().Where(x => x.Id == id).FirstOrDefaultAsync();
+        }
+
     }
 }

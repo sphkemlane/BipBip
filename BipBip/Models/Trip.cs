@@ -5,14 +5,15 @@ using System.Text;
 
 namespace BipBip.Models
 {
+    [Table("Trip")]
     public class Trip
     {
         [PrimaryKey, AutoIncrement]
         public long Id { get; set; }
 
-        public long DriverId { get; set; }
+        public int DriverId { get; set; }
 
-        public long VehicleId { get; set; }
+        public int VehicleId { get; set; }
 
         public string Departure { get; set; }
         public string Arrival { get; set; }
@@ -24,7 +25,11 @@ namespace BipBip.Models
         public int AvailableSeats { get; set; }
         public string ReservationType { get; set; }
 
+        [Ignore] 
+        public string DriverName { get; set; }
 
+        [Ignore]
+        public string CarModel { get; set; }
         public Trip()
         {
 

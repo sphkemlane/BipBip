@@ -171,6 +171,8 @@
     <AndroidResource Include="Resources\drawable\search.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrow.jpg" />
+    <AndroidResource Include="Resources\drawable\date.png" />
     <Content Include="Resources\drawable\historique.jpg" />
     <Content Include="Resources\drawable\profil.jpg" />
     <AndroidResource Include="Resources\drawable\publier.jpg" />

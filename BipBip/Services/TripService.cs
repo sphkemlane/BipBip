@@ -46,15 +46,19 @@ namespace BipBip.Services
 
         public List<Trip> SearchTrips(string departureCity, string destinationCity, DateTime departureDate, int numberOfSeats)
         {
+            Console.WriteLine("Searching for trips from " + departureCity + " to " + destinationCity + " on " + departureDate + " for " + numberOfSeats + " persons");
             List<Trip> allTrips = _tripRepository.GetAllTrips();
+            Console.WriteLine("Found " + allTrips.Count + " trips in the database");
             return allTrips
                 .Where(trip =>
-                    trip.Departure.Equals(departureCity, StringComparison.OrdinalIgnoreCase) &&
-                    trip.Arrival.Equals(destinationCity, StringComparison.OrdinalIgnoreCase) &&
+                    trip.Departure.Trim().Equals(departureCity.Trim(), StringComparison.OrdinalIgnoreCase) &&
+                    trip.Arrival.Trim().Equals(destinationCity.Trim(), StringComparison.OrdinalIgnoreCase) &&
                     trip.DepartureTime.Date == departureDate.Date &&
                     trip.AvailableSeats >= numberOfSeats)
                 .ToList();
         }
+
+
 
     }
 }

@@ -76,7 +76,6 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.csproj.AssemblyReferenc
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
-D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddBioPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\AddCarPage1.xaml.g.cs
@@ -106,3 +105,4 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MessagePage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MesTrajets.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\SearchResultsPage.xaml.g.cs

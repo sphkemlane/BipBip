@@ -1,4 +1,5 @@
 ﻿using BipBip.Models;
+using BipBip.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,13 @@ namespace BipBip.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePageF : ContentPage
     {
+        private readonly DbService _dbService;
+        private readonly TripService _tripService;
         public HomePageF()
         {
             InitializeComponent();
+            _dbService = new DbService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
+            _tripService = new TripService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
         }
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)
@@ -42,7 +47,49 @@ namespace BipBip.Views
             await Navigation.PushAsync(new MessagePage());
         }
 
-        
+        private async void OnSearchButtonClicked(object sender, EventArgs e)
+        {
+            // Récupérer les valeurs des contrôles d'entrée
+            string departure = DepartureEntry.Text;
+            string destination = DestinationEntry.Text;
+            DateTime selectedDate = DatePicker.Date;
+            Console.WriteLine("date: " + selectedDate);
+            int numberOfPersons = Convert.ToInt32(PassengerCountEntry.Text);
+            /*Trip newTrip = new Trip
+            {
+                DriverId = 1,
+                VehicleId = 1,
+                Departure = "Lyon",
+                Arrival = "Marseille",
+                DepartureTime = DateTime.Now, 
+                AvailableSeats = 3,
+                Price = 25.0,
+            };
+            Trip newTrip1 = new Trip
+            {
+                DriverId = 1,
+                VehicleId = 1,
+                Departure = "Lyon",
+                Arrival = "Marseille",
+                DepartureTime = DateTime.Now.AddMinutes(45),
+                AvailableSeats = 3,
+                Price = 35.0,
+            };
+            _tripService.AddTrip(newTrip);
+            _tripService.AddTrip(newTrip1);*/
+
+            List<Trip> matchingTrips = _tripService.SearchTrips(departure, destination, selectedDate, numberOfPersons);
+            Console.WriteLine("matchingTrips: " + matchingTrips.Count);
+            foreach (Trip trip in matchingTrips)
+            {
+                trip.DriverName = _dbService.GetUserByIdAsync(trip.DriverId).Result.FirstName;
+                trip.CarModel = _dbService.GetVehiculeByIdAsync(trip.VehicleId).Result.Modele;
+            }
+            // Naviguer vers la SearchResultsPage en passant les valeurs comme paramètres
+            await Navigation.PushAsync(new SearchResultsPage(departure, destination, selectedDate, numberOfPersons, matchingTrips));
+        }
+
+
 
         //deconnexion a mettre dans mon profil
 

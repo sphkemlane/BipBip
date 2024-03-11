@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.SearchResultsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--  Première ligne pour la barre d'informations  -->
+            <RowDefinition Height="Auto" />
+            <!--  Deuxième ligne pour la liste de trajets compatibles  -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--  Barre d'informations saisies  -->
+        <Frame
+            x:Name="InfoFrame"
+            Grid.Row="0"
+            Margin="0,0,0,0"
+            Padding="10"
+            BackgroundColor="#2196F3"
+            HeightRequest="50">
+            <StackLayout>
+                <!--  Première ligne avec le trajet  -->
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image
+                        HeightRequest="20"
+                        Source="Arrivee.png"
+                        WidthRequest="20" />
+                    <Label
+                        x:Name="DepartureLabel"
+                        Text=""
+                        TextColor="White" />
+                    <Image
+                        HeightRequest="20"
+                        Source="arrow.jpg"
+                        WidthRequest="20" />
+                    <Label
+                        x:Name="DestinationLabel"
+                        Text=""
+                        TextColor="White" />
+                </StackLayout>
+
+                <!--  Deuxième ligne avec la date et le nombre de personnes  -->
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Image
+                        HeightRequest="20"
+                        Source="date.png"
+                        WidthRequest="20" />
+                    <Label
+                        x:Name="DateLabel"
+                        Text=""
+                        TextColor="White" />
+                    <Image
+                        HeightRequest="20"
+                        Source="profil.png"
+                        WidthRequest="20" />
+                    <Label
+                        x:Name="NumberOfPersonsLabel"
+                        Text=""
+                        TextColor="White" />
+                </StackLayout>
+
+                <!--  Bouton d'édition  -->
+                <Image
+                    HeightRequest="20"
+                    Source="edit_icon.png"
+                    VerticalOptions="End"
+                    WidthRequest="20">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EditInfoCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Frame>
+
+
+
+        <!--  Bouton "Filtrer" à droite de la barre  -->
+        <Button
+            x:Name="FilterButton"
+            Grid.Row="0"
+            Margin="0,0,10,0"
+            BackgroundColor="#2196F3"
+            Command="{Binding FilterCommand}"
+            CornerRadius="5"
+            HorizontalOptions="End"
+            Text="Filtrer"
+            TextColor="White" />
+
+        <!--  Liste de trajets compatibles sous forme de cartes  -->
+        <!--  Liste de trajets compatibles sous forme de cartes  -->
+        <CollectionView
+            x:Name="MatchingTripsCollectionView"
+            Grid.Row="1"
+            ItemsSource="{Binding CompatibleTrips}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame
+                        Margin="10"
+                        BackgroundColor="White"
+                        BorderColor="Gray"
+                        CornerRadius="10"
+                        HasShadow="True">
+                        <StackLayout>
+                            <Label FontAttributes="Bold" Text="{Binding DepartureTime}" />
+                            <Label Text="{Binding Price, StringFormat='Prix : {0:C}'}" />
+                            <Label FontAttributes="Italic" Text="{Binding DriverName}" />
+                            <Label Text="{Binding CarModel}" />
+                            <!--  Ajouter le bouton Réserver  -->
+                            <Button
+                                Margin="0,10,0,0"
+                                BackgroundColor="#2196F3"
+                                Clicked="OnReserveButtonClicked"
+                                CornerRadius="5"
+                                Text="Réserver"
+                                TextColor="White" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+    </Grid>
+
+</ContentPage>
