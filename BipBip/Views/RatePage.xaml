@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.RatePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <!--  Rating section  -->
+            <Label HorizontalOptions="Center" Text="Notez votre expérience sur 5:" />
+            <StackLayout
+                x:Name="starsLayout"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="5">
+                <Image
+                    x:Name="star1"
+                    ClassId="1"
+                    GestureRecognizers="{TapGestureRecognizer Tapped='OnStarTapped'}"
+                    HeightRequest="30"
+                    Source="star_gray.png"
+                    WidthRequest="30" />
+                <Image
+                    x:Name="star2"
+                    ClassId="2"
+                    GestureRecognizers="{TapGestureRecognizer Tapped='OnStarTapped'}"
+                    HeightRequest="30"
+                    Source="star_gray.png"
+                    WidthRequest="30" />
+                <Image
+                    x:Name="star3"
+                    ClassId="3"
+                    GestureRecognizers="{TapGestureRecognizer Tapped='OnStarTapped'}"
+                    HeightRequest="30"
+                    Source="star_gray.png"
+                    WidthRequest="30" />
+                <Image
+                    x:Name="star4"
+                    ClassId="4"
+                    GestureRecognizers="{TapGestureRecognizer Tapped='OnStarTapped'}"
+                    HeightRequest="30"
+                    Source="star_gray.png"
+                    WidthRequest="30" />
+                <Image
+                    x:Name="star5"
+                    ClassId="5"
+                    GestureRecognizers="{TapGestureRecognizer Tapped='OnStarTapped'}"
+                    HeightRequest="30"
+                    Source="star_gray.png"
+                    WidthRequest="30" />
+            </StackLayout>
+
+
+
+
+
+            <!--  Comment section  -->
+            <Label
+                x:Name="CommentEntry"
+                HorizontalOptions="Center"
+                Text="Ajoutez un commentaire:" />
+            <Editor
+                HeightRequest="150"
+                Placeholder="Entrez votre commentaire ici"
+                WidthRequest="300" />
+
+            <!--  Button  -->
+            <Button Clicked="OnEvaluateButtonClicked" Text="Évaluer" />
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

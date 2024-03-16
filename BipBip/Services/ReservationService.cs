@@ -34,6 +34,11 @@ namespace BipBip.Services
             _reservationRepository.InsertReservation(reservation);
         }
 
+        public void UpdateReservation(Reservation reservation)
+        {
+            _reservationRepository.UpdateReservation(reservation);
+        }
+
         public void RemoveReservation(Reservation reservation) 
         { 
             _reservationRepository.DeleteReservation(reservation.Id);

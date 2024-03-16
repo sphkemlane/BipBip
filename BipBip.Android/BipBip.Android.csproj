@@ -176,6 +176,8 @@
     <Content Include="Resources\drawable\historique.jpg" />
     <Content Include="Resources\drawable\profil.jpg" />
     <AndroidResource Include="Resources\drawable\publier.jpg" />
+    <AndroidResource Include="Resources\drawable\star_gray.png" />
+    <AndroidResource Include="Resources\drawable\star_yellow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

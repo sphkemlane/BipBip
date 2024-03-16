@@ -107,3 +107,4 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MessagePage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MesTrajets.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\SearchResultsPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ReservationConfirmationPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RatePage.xaml.g.cs

@@ -2677,3 +2677,5 @@ D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\search.png
 D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\publier.jpg
 D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\arrow.jpg
 D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\date.png
+D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\star_gray.png
+D:\Projets\BipBip\BipBip.Android\obj\Debug\130\res\drawable\star_yellow.png

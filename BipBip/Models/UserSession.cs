@@ -12,12 +12,12 @@ namespace BipBip.Models
 
         public static int Id { get; private set; }
 
-        public static void StartSession(string userName, string firstName, int Id)
+        public static void StartSession(string userName, string firstName, int userId)
         {
             UserName = userName;
             FirstName = firstName;
             IsLoggedIn = true;
-            Id = Id;
+            Id = userId;
         }
 
         public static void EndSession() 

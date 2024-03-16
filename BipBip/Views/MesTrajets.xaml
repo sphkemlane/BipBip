@@ -131,7 +131,13 @@
                                 <Label Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
                                 <Label FontAttributes="Italic" Text="{Binding Trip.DriverName}" />
                                 <Label Text="{Binding Trip.CarModel}" />
-                                <!--  Ajouter le bouton Réserver  -->
+                                <Button
+                                    Margin="0,10,0,0"
+                                    BackgroundColor="#2196F3"
+                                    Clicked="OnMessageButtonClicked"
+                                    CornerRadius="5"
+                                    Text="Envoyer Un Message"
+                                    TextColor="White" />
 
                             </StackLayout>
                         </Frame>
@@ -172,7 +178,13 @@
                                 <Label Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
                                 <Label FontAttributes="Italic" Text="{Binding Trip.DriverName}" />
                                 <Label Text="{Binding Trip.CarModel}" />
-                                <!--  Ajouter le bouton Réserver  -->
+                                <Button
+                                    Margin="0,10,0,0"
+                                    BackgroundColor="#2196F3"
+                                    Clicked="OnRateButtonClicked"
+                                    CornerRadius="5"
+                                    Text="Rating"
+                                    TextColor="White" />
 
                             </StackLayout>
                         </Frame>

@@ -16736,22 +16736,28 @@ namespace BipBip.Droid
 			public const int splash1 = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int Taxi = 2131165352;
+			public const int star_gray = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int test_custom_background = 2131165353;
+			public const int star_yellow = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int tooltip_frame_dark = 2131165354;
+			public const int Taxi = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int tooltip_frame_light = 2131165355;
+			public const int test_custom_background = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int twitter = 2131165356;
+			public const int tooltip_frame_dark = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int xamarin_logo = 2131165357;
+			public const int tooltip_frame_light = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int twitter = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int xamarin_logo = 2131165359;
 			
 			static Drawable()
 			{

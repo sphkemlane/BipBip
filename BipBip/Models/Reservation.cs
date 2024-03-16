@@ -7,6 +7,7 @@ namespace BipBip.Models
 {
     public class Reservation
     {
+        [PrimaryKey, AutoIncrement]
         public long Id { get; set; }
 
         public long TripId { get; set; }
@@ -25,6 +26,7 @@ namespace BipBip.Models
 
         public int Rating { get; set; }
 
+        public string Comment { get; set; }
 
         public enum ReservationStatus
         {
