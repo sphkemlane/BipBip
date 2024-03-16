@@ -1,4 +1,5 @@
 ﻿using BipBip.Models;
+using BipBip.Repositories;
 using BipBip.Services;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,13 @@ namespace BipBip.Views
     {
         private readonly DbService _dbService;
         private readonly TripService _tripService;
+        readonly private VehiculeRepo _vehiculesRepo;
         public HomePageF()
         {
             InitializeComponent();
             _dbService = new DbService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
             _tripService = new TripService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
+            _vehiculesRepo = new VehiculeRepo(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
         }
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)

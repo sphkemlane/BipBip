@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BipBip.Models
 {
+    [Table("Reservation")]
     public class Reservation
     {
         [PrimaryKey, AutoIncrement]
@@ -47,7 +48,8 @@ namespace BipBip.Models
         public Trip Trip { get; set; }
         [Ignore]
         public User Reservee { get; set; }
-
+        [Ignore]
+        public bool RatingVisible { get; set; }
 
         public Reservation()
         {

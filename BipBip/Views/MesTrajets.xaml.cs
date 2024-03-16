@@ -49,6 +49,18 @@ namespace BipBip.Views
                 .Where(reservation => _tripService.GetTripById(reservation.TripId).DepartureTime <= now)
                 .ToList();
 
+            foreach (var reservation in pastReservedTrips)
+            {
+                if (reservation.Rating != null && reservation.Rating != 0)
+                {
+                    reservation.RatingVisible = false; // Masquer le bouton
+                }
+                else
+                {
+                    reservation.RatingVisible = true; // Afficher le bouton
+                }
+            }
+
             // Assigne les sources de données aux ListViews correspondantes
             PastReservedTripsCollectionView.ItemsSource = pastReservedTrips;
             ReservedUpcomingTripsCollectionView.ItemsSource = upcomingReservedTrips;

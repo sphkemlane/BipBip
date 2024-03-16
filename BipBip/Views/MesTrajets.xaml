@@ -183,8 +183,21 @@
                                     BackgroundColor="#2196F3"
                                     Clicked="OnRateButtonClicked"
                                     CornerRadius="5"
+                                    IsVisible="{Binding RatingVisible}"
                                     Text="Rating"
                                     TextColor="White" />
+                                <Label Text="déjà évalué">
+                                    <Label.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding RatingVisible}"
+                                            TargetType="Label"
+                                            Value="True">
+                                            <Setter Property="IsVisible" Value="False" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+
+
 
                             </StackLayout>
                         </Frame>

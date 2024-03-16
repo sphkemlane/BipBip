@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BipBip.Models
 {
+    [Table("User")]
     public class User
     {
         [PrimaryKey, AutoIncrement] 

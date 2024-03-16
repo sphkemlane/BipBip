@@ -58,11 +58,9 @@
 
 
             <!--  Comment section  -->
-            <Label
-                x:Name="CommentEntry"
-                HorizontalOptions="Center"
-                Text="Ajoutez un commentaire:" />
+            <Label HorizontalOptions="Center" Text="Ajoutez un commentaire:" />
             <Editor
+                x:Name="CommentEntry"
                 HeightRequest="150"
                 Placeholder="Entrez votre commentaire ici"
                 WidthRequest="300" />

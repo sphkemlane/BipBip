@@ -63,5 +63,17 @@ namespace BipBip.Services
             return _connection.Table<Vehicule>().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
+        public async Task DeleteAllTablesAsync()
+        {
+            // Liste de toutes les tables que vous souhaitez supprimer
+            string[] tablesToDelete = { "Reservation", "Trip", "User", "Vehicule", "Message" }; // Ajoutez ici toutes les tables que vous avez dans votre base de données
+
+            foreach (var table in tablesToDelete)
+            {
+                string dropTableQuery = $"DROP TABLE IF EXISTS {table};";
+                await _connection.ExecuteAsync(dropTableQuery);
+            }
+        }
+
     }
 }

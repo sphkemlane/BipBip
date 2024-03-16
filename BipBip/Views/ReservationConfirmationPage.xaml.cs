@@ -49,7 +49,7 @@ namespace BipBip.Views
             };
             trip.AvailableSeats -= numberOfReservation;
             _tripService.UpdateTrip(trip);
-
+            Console.WriteLine("ReservationId: " + newReservation.Id);
             _reservationService.AddReservation(newReservation);
 
             
