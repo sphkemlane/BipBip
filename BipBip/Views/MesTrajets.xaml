@@ -3,16 +3,182 @@
     x:Class="BipBip.Views.MesTrajets"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:system="clr-namespace:System;assembly=mscorlib"
     BackgroundColor="White"
     NavigationPage.HasNavigationBar="False">
+    <!--  Page de mes trajets gdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdhhdhddhdhhdhdhd  -->
+    <!--  Page de mes trajets gdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdhhdhddhdhhdhdhd  -->
+    <!--  Page de mes trajets gdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdhhdhddhdhhdhdhd  -->
+    <!--  Page de mes trajets gdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdhhdhddhdhhdhdhd  -->
+    <ScrollView>
+        <StackLayout Margin="20">
+            <!--  Barre d'informations  -->
+            <Frame
+                x:Name="PublishedUpcomingInfoFrame"
+                Grid.Row="0"
+                Margin="0,0,0,0"
+                Padding="10"
+                BackgroundColor="#2196F3"
+                HeightRequest="20">
+                <StackLayout>
+                    <!--  Label pour le titre des trajets publiés à venir  -->
+                    <Label
+                        x:Name="PublishedUpcomingTitleLabel"
+                        HorizontalOptions="Center"
+                        Text="Trajets Publiés à venir"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </Frame>
 
-    <StackLayout>
-        <Label
-            HorizontalOptions="CenterAndExpand"
-            Text="Mes Trajets"
-            VerticalOptions="CenterAndExpand" />
+            <!--  Liste de trajets à venir  -->
+            <CollectionView x:Name="PublishedUpcomingTripsCollectionView" ItemsSource="{Binding CompatibleTrips}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="10"
+                            BackgroundColor="White"
+                            BorderColor="Gray"
+                            CornerRadius="10"
+                            HasShadow="True">
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding DepartureTime}" />
+                                <Label Text="{Binding Price, StringFormat='Prix : {0:C}'}" />
+                                <Label FontAttributes="Italic" Text="{Binding DriverName}" />
+                                <Label Text="{Binding CarModel}" />
+                                <!--  Ajouter le bouton Réserver  -->
 
-    </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
+            <!--  Barre d'informations  -->
+            <Frame
+                x:Name="PublishedArchivedInfoFrame"
+                Margin="0,20,0,0"
+                Padding="10"
+                BackgroundColor="#2196F3"
+                HeightRequest="20">
+                <StackLayout>
+                    <!--  Label pour le titre des trajets publiés archivés  -->
+                    <Label
+                        x:Name="PublishedArchivedTitleLabel"
+                        HorizontalOptions="Center"
+                        Text="Trajets Publiés archivés"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Liste de trajets passés  -->
+            <CollectionView x:Name="PastPublishedTripsCollectionView" ItemsSource="{Binding pastReservedTrips}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="10"
+                            BackgroundColor="White"
+                            BorderColor="Gray"
+                            CornerRadius="10"
+                            HasShadow="True">
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding DepartureTime}" />
+                                <Label Text="{Binding Price, StringFormat='Prix : {0:C}'}" />
+                                <Label FontAttributes="Italic" Text="{Binding DriverName}" />
+                                <Label Text="{Binding CarModel}" />
+                                <!--  Ajouter le bouton Réserver  -->
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <!--  heho  -->
+
+
+            <!--  Barre d'informations  -->
+            <Frame
+                x:Name="ReservedUpcomingInfoFrame"
+                Margin="0,20,0,0"
+                Padding="10"
+                BackgroundColor="#2196F3"
+                HeightRequest="20">
+                <StackLayout>
+                    <!--  Label pour le titre des trajets réservés à venir  -->
+                    <Label
+                        x:Name="ReservedUpcomingTitleLabel"
+                        HorizontalOptions="Center"
+                        Text="Trajets Reservés à venir"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Liste de trajets à venir  -->
+            <CollectionView x:Name="ReservedUpcomingTripsCollectionView" ItemsSource="{Binding CompatibleTrips}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="10"
+                            BackgroundColor="White"
+                            BorderColor="Gray"
+                            CornerRadius="10"
+                            HasShadow="True">
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding Trip.DepartureTime}" />
+                                <Label Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
+                                <Label FontAttributes="Italic" Text="{Binding Trip.DriverName}" />
+                                <Label Text="{Binding Trip.CarModel}" />
+                                <!--  Ajouter le bouton Réserver  -->
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--  Barre d'informations  -->
+            <Frame
+                x:Name="ReservedArchivedInfoFrame"
+                Margin="0,20,0,0"
+                Padding="10"
+                BackgroundColor="#2196F3"
+                HeightRequest="20">
+                <StackLayout>
+                    <!--  Label pour le titre des trajets réservés archivés  -->
+                    <Label
+                        x:Name="ReservedArchivedTitleLabel"
+                        HorizontalOptions="Center"
+                        Text="Trajets Reservés archivés"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Liste de trajets passés  -->
+            <CollectionView x:Name="PastReservedTripsCollectionView" ItemsSource="{Binding pastReservedTrips}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Margin="10"
+                            BackgroundColor="White"
+                            BorderColor="Gray"
+                            CornerRadius="10"
+                            HasShadow="True">
+                            <StackLayout>
+                                <Label FontAttributes="Bold" Text="{Binding Trip.DepartureTime}" />
+                                <Label Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
+                                <Label FontAttributes="Italic" Text="{Binding Trip.DriverName}" />
+                                <Label Text="{Binding Trip.CarModel}" />
+                                <!--  Ajouter le bouton Réserver  -->
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

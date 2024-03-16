@@ -44,6 +44,11 @@ namespace BipBip.Services
             _tripRepository.DeleteTrip(id);
         }
 
+        public List<Trip> GetPublishedTripsByUserId(int userId)
+        {
+            return _tripRepository.GetAllTrips().Where(trip => trip.DriverId == userId).ToList();
+        }
+
         public List<Trip> SearchTrips(string departureCity, string destinationCity, DateTime departureDate, int numberOfSeats)
         {
             Console.WriteLine("Searching for trips from " + departureCity + " to " + destinationCity + " on " + departureDate + " for " + numberOfSeats + " persons");
@@ -57,6 +62,7 @@ namespace BipBip.Services
                     trip.AvailableSeats >= numberOfSeats)
                 .ToList();
         }
+
 
 
 

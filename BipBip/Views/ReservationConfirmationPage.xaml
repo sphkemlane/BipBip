@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.ReservationConfirmationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontAttributes="Bold" Text="Confirm Reservation" />
+
+            <!--  Display trip details  -->
+            <Label Text="{Binding Departure}" />
+            <Label Text="{Binding Arrival}" />
+            <Label Text="{Binding DepartureTime, StringFormat='Date: {0:d}'}" />
+            <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" />
+
+
+            <Button Clicked="OnConfirmReservationClicked" Text="Confirm Reservation" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
