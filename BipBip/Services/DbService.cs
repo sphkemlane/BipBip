@@ -75,5 +75,10 @@ namespace BipBip.Services
             }
         }
 
+        public Task<int> UpdateUserAsync(User user)
+        {
+            return _connection.UpdateAsync(user);
+        }
+
     }
 }

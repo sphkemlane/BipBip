@@ -16,6 +16,9 @@ namespace BipBip.Models
         public string Password { get; set; }
         
         public string phoneNumber { get; set; }
+
+        public double AverageRating { get; set; }
+
         public User() { }
     }
 }
