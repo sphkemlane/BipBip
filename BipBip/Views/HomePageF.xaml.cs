@@ -58,6 +58,9 @@ namespace BipBip.Views
             DateTime selectedDate = DatePicker.Date;
             Console.WriteLine("date: " + selectedDate);
             int numberOfPersons = Convert.ToInt32(PassengerCountEntry.Text);
+
+
+
             /*Trip newTrip = new Trip
             {
                 DriverId = 1,

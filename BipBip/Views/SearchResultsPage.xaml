@@ -12,6 +12,8 @@
             <!--  Première ligne pour la barre d'informations  -->
             <RowDefinition Height="Auto" />
             <!--  Deuxième ligne pour la liste de trajets compatibles  -->
+            <RowDefinition Height="Auto" />
+            <!--  Troisième ligne pour le bouton "Filtrer"  -->
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -85,17 +87,57 @@
             Grid.Row="0"
             Margin="0,0,10,0"
             BackgroundColor="#2196F3"
+            Clicked="OnFilterButtonClicked"
             Command="{Binding FilterCommand}"
             CornerRadius="5"
             HorizontalOptions="End"
             Text="Filtrer"
             TextColor="White" />
 
+        <Frame
+            x:Name="FilterFrame"
+            Grid.Row="1"
+            Padding="10"
+            BackgroundColor="LightGray"
+            CornerRadius="10"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            VerticalOptions="Start">
+            <!--  Contenu du filtrage  -->
+            <StackLayout>
+                <Label
+                    Margin="130,10,50,50"
+                    FontAttributes="Bold"
+                    Text="Filtrer par :" />
+                <Button
+                    Margin="20,0,20,10"
+                    BackgroundColor="#2196F3"
+                    Clicked="OnRatingFilterClicked"
+                    CornerRadius="5"
+                    Text="Rating du mieux noté au moins noté"
+                    TextColor="White" />
+                <Button
+                    Margin="20,0,20,10"
+                    BackgroundColor="#2196F3"
+                    Clicked="OnPriceFilterClicked"
+                    CornerRadius="5"
+                    Text="Par prix le plus bas au plus haut"
+                    TextColor="White" />
+                <Button
+                    Margin="20,0,20,10"
+                    BackgroundColor="#2196F3"
+                    Clicked="OnDepartureTimeFilterClicked"
+                    CornerRadius="5"
+                    Text="Départ plus tôt"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+
         <!--  Liste de trajets compatibles sous forme de cartes  -->
         <!--  Liste de trajets compatibles sous forme de cartes  -->
         <CollectionView
             x:Name="MatchingTripsCollectionView"
-            Grid.Row="1"
+            Grid.Row="2"
             ItemsSource="{Binding CompatibleTrips}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>

@@ -30,6 +30,10 @@ namespace BipBip.Models
 
         [Ignore]
         public string CarModel { get; set; }
+
+        [Ignore]
+        public User Driver { get; set; }
+
         public Trip()
         {
 
