@@ -108,3 +108,13 @@ D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MesTrajets.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\SearchResultsPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ReservationConfirmationPage.xaml.g.cs
 D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\RatePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ArrivalPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ChoosePhotoControl.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ComfortConfirmationPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\DatePickerPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\DeparturePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\InstantBookingPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\PassengerCountPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\SetPricePage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\TimePickerPage.xaml.g.cs
+D:\Projets\BipBip\BipBip\obj\Debug\netstandard2.0\Views\UploadImage.xaml.g.cs

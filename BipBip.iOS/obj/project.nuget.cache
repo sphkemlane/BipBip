@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/5Zlc3SDHqTkPxtj+ib0AYbFhMiFNkh45TwRvTYVgDmWYsk/LJpYEq7094r9Y287TlSRdIcw9a2v7+wM6+FpmA==",
+  "dgSpecHash": "qJsHZTAMxcpeEe9EsCYhxue7EJ4OdAa+sFKr6GxbUZvfZkbZHZtY/yPLnjUawtaf8zMgl8YCTo3s8KA2cnUZGw==",
   "success": true,
   "projectFilePath": "D:\\Projets\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,8 @@
     "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2196\\xamarin.forms.maps.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

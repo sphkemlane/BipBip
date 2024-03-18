@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[5.0.0.2196, )"
             },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.8.116, )"

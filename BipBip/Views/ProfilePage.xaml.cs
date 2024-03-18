@@ -21,9 +21,11 @@ namespace BipBip.Views
         {
             InitializeComponent();
             setWelcomeMessage();
-           
 
-            
+
+            //Affecter l'URI de l'image à la Source de l'élément Image
+
+
 
             //-- 
             BindingContext = new ProfileViewModel(); // Assignation de votre ViewModel comme BindingContext
@@ -41,6 +43,7 @@ namespace BipBip.Views
                     viewModel.UserBio = bioText;
                 }
             });
+
 
         }
 
@@ -78,12 +81,23 @@ namespace BipBip.Views
             LabelEmail.Text = $"   ";
         }
 
-        
+        //Button revenir en arrière
+        private async void OnBackButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        //Photo
+
+
 
         //protected override void OnDisappearing()
         //{
         //    MessagingCenter.Unsubscribe<AddBioPage, string>(this, "BioUpdated");
         //    base.OnDisappearing();
         //}
+
+
+
     }
 }

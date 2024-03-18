@@ -25,6 +25,8 @@ namespace BipBip.Models
         public int AvailableSeats { get; set; }
         public string ReservationType { get; set; }
 
+        public bool LeaveSeatFree { get; set; } 
+
         [Ignore] 
         public string DriverName { get; set; }
 

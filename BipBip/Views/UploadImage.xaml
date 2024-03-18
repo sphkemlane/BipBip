@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:control="clr-namespace:BipBip.Views"
+             x:Class="BipBip.Views.UploadImage"
+             Title="Upload Image">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+
+            <StackLayout x:Name="sl" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Button x:Name="btn" Text="Upload Image" Clicked="btn_Clicked"></Button>
+                <Image x:Name="img"  WidthRequest="200" HeightRequest="200"></Image>
+                <Button x:Name="confirmButton" Text="Confirmer la photo" Clicked="OnConfirmButtonClicked" IsVisible="False"/>
+
+
+            </StackLayout>
+
+            <Grid x:Name="gridImageOption" BackgroundColor="#e4fffc" Padding="20" Grid.Row="0"  IsVisible="false"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Frame CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="200"  VerticalOptions="CenterAndExpand">
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
+                        <Label Text="Update Image" HorizontalOptions="Center" Padding="0,0,0,20" FontSize="25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                      TextColor="Black"/>
+
+                        <control:ChoosePhotoControl x:Name="ctrlCamera" Text="Take Photo" IconSource="camera.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" >
+                            <control:ChoosePhotoControl.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ctrlCamera_Tapped"></TapGestureRecognizer>
+                            </control:ChoosePhotoControl.GestureRecognizers>
+                        </control:ChoosePhotoControl>
+                        <control:ChoosePhotoControl Text="Select from Gallary" IconSource="galery.png" Grid.Row="1"  HorizontalOptions="Center" Grid.Column="1" >
+                            <control:ChoosePhotoControl.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ctrlGallery_Tapped"></TapGestureRecognizer>
+                            </control:ChoosePhotoControl.GestureRecognizers>
+                        </control:ChoosePhotoControl>
+                        <Button x:Name="btnCancel" CornerRadius="10" Clicked="btnCancel_Clicked" Text="Cancel" Grid.Row="3" Margin="0,10,0,0" Grid.Column="0" Grid.ColumnSpan="2"></Button>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

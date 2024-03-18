@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.SetPricePage" BackgroundColor="White">
+    <StackLayout Padding="20">
+        <Label Text="Fixez votre prix par place" />
+        <Stepper x:Name="priceStepper" Minimum="1" Maximum="100" Increment="1" Value="5" ValueChanged="OnStepperValueChanged" />
+        <Label x:Name="priceLabel" Text="5 €" HorizontalOptions="Center" />
+
+        <!-- Exemple de mise en page pour des prix de trajets similaires -->
+
+
+        <StackLayout>
+            <Button Text="Continuer" Clicked="OnContinueClicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

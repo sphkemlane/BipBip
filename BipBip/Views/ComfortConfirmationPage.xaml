@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.ComfortConfirmationPage" BackgroundColor="White">
+    <StackLayout Padding="20">
+        <Label Text="Le confort, c'est important! Laissez un siège libre à l'arrière." />
+        <Button Text="Ça marche !" Clicked="OnAgreeClicked" />
+        <Button Text="Non, ils se serreront à trois" Clicked="OnDisagreeClicked" />
+    </StackLayout>
+</ContentPage>

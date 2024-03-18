@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="BipBip.Views.DeparturePage"
+             Title="D'où partez-vous?" BackgroundColor="White">
+    <StackLayout Padding="10">
+        <!-- SearchBar pour la saisie de l'adresse -->
+        <SearchBar Placeholder="Saisissez l'adresse précise" 
+                   SearchCommand="{Binding SearchCommand}" 
+                   Text="{Binding SearchText}"/>
+        <!-- Carte pour afficher l'emplacement sélectionné -->
+        <maps:Map x:Name="map"
+          IsShowingUser="true"
+          HeightRequest="300">
+
+        </maps:Map>
+        <!-- Bouton pour continuer -->
+        <Button Text="Continuer" 
+                Clicked="OnContinueClicked" 
+                IsEnabled="{Binding IsLocationSelected}"/>
+    </StackLayout>
+</ContentPage>

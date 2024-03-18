@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BipBip.Views.InstantBookingPage" BackgroundColor="White">
+    <StackLayout Padding="20">
+        <Label Text="Activez la réservation instantanée pour vos passagers" />
+        <Button Text="Activer la réservation instantanée" Clicked="OnOptionSelected"/>
+        <Button Text="Consulter chaque demande de passager avant qu'elle n'expire" Clicked="OnOptionSelected"/>
+    </StackLayout>
+</ContentPage>

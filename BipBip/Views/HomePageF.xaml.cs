@@ -28,8 +28,9 @@ namespace BipBip.Views
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)
         {
+            Trip _trip = new Trip();
             // Effectuez la redirection vers la page AddRide
-            await Navigation.PushAsync(new AddRide());
+            await Navigation.PushAsync(new DatePickerPage(_trip));
         }
 
         private async void OnProfilButtonClicked(object sender, EventArgs e)

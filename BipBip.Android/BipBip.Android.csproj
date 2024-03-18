@@ -71,6 +71,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>5.0.0.2196</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\FileHelper.cs" />
@@ -173,6 +176,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\arrow.jpg" />
     <AndroidResource Include="Resources\drawable\date.png" />
+    <AndroidResource Include="Resources\drawable\camera.png" />
+    <AndroidResource Include="Resources\drawable\galery.png" />
     <Content Include="Resources\drawable\historique.jpg" />
     <Content Include="Resources\drawable\profil.jpg" />
     <AndroidResource Include="Resources\drawable\publier.jpg" />
