@@ -40,7 +40,7 @@
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Image
                             HeightRequest="24"
-                            Source="Arrivee.png"
+                            Source="check.png"
                             VerticalOptions="Center"
                             WidthRequest="24" />
                         <Entry
@@ -76,7 +76,8 @@
                             VerticalOptions="Center" />
                         <Image
                             HeightRequest="24"
-                            Source="profil.png"
+                            Source="users.png"
+                            BackgroundColor="Transparent"
                             VerticalOptions="Center"
                             WidthRequest="24" />
                         <Entry
@@ -85,6 +86,7 @@
                             FontSize="18"
                             HorizontalOptions="End"
                             Keyboard="Numeric"
+                            TextColor="Black"
                             Placeholder="1"
                             WidthRequest="70" />
                     </StackLayout>

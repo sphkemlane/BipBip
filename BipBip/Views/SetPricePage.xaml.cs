@@ -40,8 +40,6 @@ namespace BipBip.Views
         private async void OnContinueClicked(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(" " + _trip.DepartureTime + " " + " " + _trip.ArrivalTime + " " + " " + _trip.Departure + " " + " " + _trip.Arrival + " " + " " + _trip.AvailableSeats + " " + " " + _trip.Price + " ");
-
-
             await DisplayAlert("Success", "le trajet a été enregistré avec succès", "OK");
             await Navigation.PushAsync(new HomePageF());
 
