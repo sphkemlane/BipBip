@@ -124,17 +124,18 @@
                     </Grid.ColumnDefinitions>
 
                     <!--  Icons with labels, adjusted size  -->
-                    <Image
+              <Image
                         Grid.Column="0"
-                        Margin="0,0,0,15"
+                        Margin="0,0,0,14"
                         HeightRequest="28"
                         HorizontalOptions="Center"
-                        Source="file.png"
+                        Source="home2.png"
                         WidthRequest="28" />
                     <Label
                         Grid.Column="0"
                         Margin="0,0,0,5"
                         HorizontalOptions="Center"
+                        BackgroundColor="Transparent"
                         Text="Acceuil"
                         VerticalOptions="End" />
 
@@ -144,7 +145,9 @@
                         Clicked="OnPublierButtonClicked"
                         HeightRequest="28"
                         HorizontalOptions="Center"
-                        Source="publier_1.png"
+                        BackgroundColor="Transparent"
+
+                        Source="add.png"
                         WidthRequest="28" />
                     <Label
                         Grid.Column="1"
@@ -158,8 +161,10 @@
                         Margin="0,0,0,15"
                         Clicked="OnMesTrajetsButtonClicked"
                         HeightRequest="28"
+                        BackgroundColor="Transparent"
+
                         HorizontalOptions="Center"
-                        Source="historique.png"
+                        Source="history.png"
                         WidthRequest="28" />
                     <Label
                         Grid.Column="2"
@@ -172,9 +177,11 @@
                         Grid.Column="3"
                         Margin="0,0,0,15"
                         Clicked="OnMessagesButtonClicked"
+                                                BackgroundColor="Transparent"
+
                         HeightRequest="28"
                         HorizontalOptions="Center"
-                        Source="messages.png"
+                        Source="chat.png"
                         WidthRequest="28" />
                     <Label
                         Grid.Column="3"
@@ -188,8 +195,10 @@
                         Margin="0,0,0,15"
                         Clicked="OnProfilButtonClicked"
                         HeightRequest="28"
+                                                BackgroundColor="Transparent"
+
                         HorizontalOptions="Center"
-                        Source="profil.png"
+                        Source="user.png"
                         WidthRequest="28" />
                     <Label
                         Grid.Column="4"

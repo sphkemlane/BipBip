@@ -10,7 +10,7 @@
             <Grid Padding="15">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
-                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="80"/>
                     <RowDefinition Height="400"/>
                 </Grid.RowDefinitions>
@@ -20,36 +20,59 @@
            HeightRequest="20" 
            Margin="200,-20,-60,-20"/>
 
-                <Image Source="file.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="100" Grid.Row="1"/>
+                <Frame Grid.Row="1"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="Center"
+                       HeightRequest="120" 
+                          WidthRequest="120"
+                          CornerRadius="90"
+                   Padding="0"
+                   Margin="0,50,0,0"
+                    IsClippedToBounds="true">
+                    <Image Source="file.png"
+           Aspect="AspectFill"
+           HeightRequest="120"
+           WidthRequest="120"/>
+                </Frame>
+                <Label
+         Grid.Row="2"
+         Margin="100,0,0,20"
+         FontAttributes="Bold"
+         FontSize="30"
+         Text="Connexion "
+         TextColor="Black" />
+
+
+
                 <StackLayout Grid.Row="3" Spacing="20" >
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
 
-                        <Image Source="https://cdn-icons-png.flaticon.com/512/561/561188.png" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" HorizontalOptions="Start"/>
-                        <Frame Grid.Column="1" BorderColor="Black" Padding="5" CornerRadius="40" >
-                            <Entry Placeholder="Email" TextColor="black" PlaceholderColor="Black" x:Name="emailEntry"/>
-                        </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="#D6EFF7" Padding="5" >
+                        <Grid>
+                            <Entry Placeholder="Email" TextColor="black"  BackgroundColor="Transparent"  x:Name="emailEntry"/>
+                        </Grid>
+                    </Frame>
 
-                    </Grid>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
 
-                        <Image Source="https://cdn.icon-icons.com/icons2/37/PNG/512/password_3715.png" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" HorizontalOptions="Start"/>
-                        <Frame Grid.Column="1" BorderColor="Black" Padding="5" CornerRadius="40" >
-                            <Entry Placeholder="Mot de passe" TextColor="black" PlaceholderColor="Black" IsPassword="True" x:Name="passwordEntry"/>
-                        </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="#D6EFF7" Padding="5">
+
+                        <Grid Padding="0">
+                        
+
+                            <Entry Placeholder="Mot de passe" TextColor="black" BackgroundColor="Transparent" IsPassword="True" x:Name="passwordEntry"/>
+                        
 
                     </Grid>
+                </Frame>
+                    <!-- Checkbox et Texte "Remember me" -->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                         <CheckBox Color="#0D47A1" VerticalOptions="Center"/>
+                        <Label Text="Remember me" TextColor="#0D47A1" VerticalOptions="Center" />
+                    </StackLayout>
 
-                    <Button Text="Se connecter" BackgroundColor="DarkCyan" TextColor="Black" Margin="30,0,0,100" CornerRadius="40" WidthRequest="150" HorizontalOptions="Center" Grid.Row="4" Clicked="OnLoginButtonClicked" />
+                    <Button Text="Se connecter" BackgroundColor="#0D47A1" TextColor="White" CornerRadius="20" WidthRequest="150" HorizontalOptions="Center"  Margin="0,40,0,0" Clicked="OnLoginButtonClicked" />
+                    <Label Text="Forgot password?" HorizontalOptions="Center" TextColor="#0D47A1" Margin="0,5"/>
 
 
                 </StackLayout>

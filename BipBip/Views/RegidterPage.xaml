@@ -24,12 +24,15 @@
                     HeightRequest="20"
                     Source="splash1.png" />
 
+
                 <Image
                     Grid.Row="1"
                     HeightRequest="100"
                     HorizontalOptions="CenterAndExpand"
                     Source="file.png"
                     VerticalOptions="Center" />
+                
+                
                 <Label
                     Grid.Row="2"
                     Margin="100,0,0,20"
@@ -37,151 +40,101 @@
                     FontSize="30"
                     Text="Inscription"
                     TextColor="Black" />
+                
+                
                 <StackLayout Grid.Row="3" Spacing="20">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
-                        <Image
-                            HeightRequest="40"
-                            HorizontalOptions="Start"
-                            Source="https://cdn.icon-icons.com/icons2/37/PNG/512/name_user_3716.png"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Frame
-                            Grid.Column="1"
-                            Padding="1"
-                            BorderColor="Black"
-                            CornerRadius="40">
+
+
+
+
+
+
+
+                    <Frame
+                      CornerRadius="15" BackgroundColor="#D6EFF7   " Padding="5">
+                        <Grid>
                             <Entry
-                                x:Name="nameEntry"
-                                Placeholder="Nom"
-                                PlaceholderColor="Black"
-                                TextColor="black" />
-                        </Frame>
+                           x:Name="nameEntry"
+                           Placeholder="Nom"
+                           TextColor="black"  BackgroundColor="Transparent" />
+                        </Grid>
+                    </Frame>
 
-                    </Grid>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
-                        <Image
-                            HeightRequest="40"
-                            HorizontalOptions="Start"
-                            Source="https://cdn.icon-icons.com/icons2/37/PNG/512/name_user_3716.png"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Frame
-                            Grid.Column="1"
-                            Padding="5"
-                            BorderColor="Black"
-                            CornerRadius="40">
+
+
+
+                    <Frame
+                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
+                        <Grid>
                             <Entry
-                                x:Name="prenomEntry"
-                                Placeholder="Preom"
-                                PlaceholderColor="Black"
-                                TextColor="black" />
-                        </Frame>
+                           x:Name="prenomEntry"
+                           Placeholder="Prenom"
+                           TextColor="black"  BackgroundColor="Transparent" />
+                        </Grid>
+                    </Frame>
 
-                    </Grid>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
-                        <Image
-                            HeightRequest="40"
-                            HorizontalOptions="Start"
-                            Source="https://cdn-icons-png.flaticon.com/512/561/561188.png"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Frame
-                            Grid.Column="1"
-                            Padding="5"
-                            BorderColor="Black"
-                            CornerRadius="40">
+
+
+                    <Frame
+                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
+                        <Grid>
                             <Entry
-                                x:Name="emailEntry"
-                                Placeholder="Email"
-                                PlaceholderColor="Black"
-                                TextColor="black" />
-                        </Frame>
+                           x:Name="emailEntry"
+                           Placeholder="Email"
+                           TextColor="black"  BackgroundColor="Transparent" />
+                        </Grid>
+                    </Frame>
 
-                    </Grid>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
-                        <Image
-                            HeightRequest="40"
-                            HorizontalOptions="Start"
-                            Source="https://cdn.icon-icons.com/icons2/37/PNG/512/password_3715.png"
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Frame
-                            Grid.Column="1"
-                            Padding="5"
-                            BorderColor="Black"
-                            CornerRadius="40">
+
+                    <Frame
+                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
+                        <Grid>
                             <Entry
-                                x:Name="passwordEntry"
-                                IsPassword="True"
-                                Placeholder="Mot de passe"
-                                PlaceholderColor="Black"
-                                TextColor="black" />
-                        </Frame>
+                           x:Name="passwordEntry"
+                           IsPassword="True"
+                           Placeholder="Mot de passe"
+                           TextColor="black"  BackgroundColor="Transparent" />
 
-                    </Grid>
+                        </Grid>
+                    </Frame>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
-                        <Image
-                            HeightRequest="40"
-                            HorizontalOptions="Start"
-                            Source="https://cdn-icons-png.flaticon.com/512/15/15874.png   "
-                            VerticalOptions="Center"
-                            WidthRequest="40" />
-                        <Frame
-                            Grid.Column="1"
-                            Padding="5"
-                            BorderColor="Black"
-                            CornerRadius="40">
+
+
+                    <Frame
+                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
+                        <Grid>
                             <Entry
-                                x:Name="phoneEntry"
-                                Placeholder="numéro de téléphone"
-                                PlaceholderColor="Black"
-                                TextColor="black" />
-                        </Frame>
+                           x:Name="phoneEntry"
+                           Placeholder="numéro de téléphone"
+                           TextColor="black"  BackgroundColor="Transparent"/>
+                        </Grid>
+                    </Frame>
 
-                    </Grid>
+
 
 
 
                 </StackLayout>
+
                 <Button
                     Grid.Row="4"
-                    Margin="30,0,0,100"
-                    BackgroundColor="DarkCyan"
+                    Margin="30,50,0,100"
+                    BackgroundColor="#0D47A1"
                     Clicked="OnRegisterButtonClicked"
-                    CornerRadius="40"
+                    CornerRadius="15"
                     HorizontalOptions="Center"
                     Text="S'inscrire"
-                    TextColor="Black"
+                    TextColor="White"
                     WidthRequest="150" />
+
                 <Label Text="se connecter">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnLabelTapped" />
@@ -198,4 +151,3 @@
         </ScrollView>
     </AbsoluteLayout>
 </ContentPage>
-

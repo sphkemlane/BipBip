@@ -3998,24 +3998,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\": {},
-    "D:\\Visual Studio partagé\\NuGetPackages": {}
+    "C:\\Users\\simo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
+      "projectUniqueName": "C:\\Users\\simo\\Desktop\\bipbiplast\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
       "projectName": "BipBip.Android",
-      "projectPath": "D:\\Projets\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
-      "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
-      "outputPath": "D:\\Projets\\BipBip\\BipBip.Android\\obj\\",
+      "projectPath": "C:\\Users\\simo\\Desktop\\bipbiplast\\BipBip\\BipBip.Android\\BipBip.Android.csproj",
+      "packagesPath": "C:\\Users\\simo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simo\\Desktop\\bipbiplast\\BipBip\\BipBip.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Visual Studio partagé\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Saad KEMLANE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4029,16 +4029,11 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj": {
-              "projectPath": "D:\\Projets\\BipBip\\BipBip\\BipBip.csproj"
+            "C:\\Users\\simo\\Desktop\\bipbiplast\\BipBip\\BipBip\\BipBip.csproj": {
+              "projectPath": "C:\\Users\\simo\\Desktop\\bipbiplast\\BipBip\\BipBip\\BipBip.csproj"
             }
           }
         }
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4048,21 +4043,9 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.3, )"
-          },
           "SQLite": {
             "target": "Package",
             "version": "[3.13.0, )"
-          },
-          "SQLite": {
-            "target": "Package",
-            "version": "[3.13.0, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.7.0, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -4072,21 +4055,9 @@
             "target": "Package",
             "version": "[5.0.0.2196, )"
           },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2196, )"
-          },
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[5.0.0.2196, )"
-          },
-          "Xamarin.Forms.Maps": {
-            "target": "Package",
-            "version": "[5.0.0.2196, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.8.116, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

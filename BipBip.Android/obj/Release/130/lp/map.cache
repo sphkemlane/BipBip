@@ -103,3 +103,12 @@ Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll
 Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
+playservicesbasement-17.1.0.aar
+playservicestasks-17.0.0.aar
+playservicesbase-17.1.0.aar
+playservicesmaps-17.0.0.aar
+Xamarin.Forms.Maps.Android.dll
+Xamarin.GooglePlayServices.Base.dll
+Xamarin.GooglePlayServices.Basement.dll
+Xamarin.GooglePlayServices.Maps.dll
+Xamarin.GooglePlayServices.Tasks.dll
