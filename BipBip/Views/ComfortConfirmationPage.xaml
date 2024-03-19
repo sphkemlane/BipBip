@@ -1,10 +1,46 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.ComfortConfirmationPage" BackgroundColor="White">
-    <StackLayout Padding="20">
-        <Label Text="Le confort, c'est important! Laissez un siège libre à l'arrière." />
-        <Button Text="Ça marche !" Clicked="OnAgreeClicked" />
-        <Button Text="Non, ils se serreront à trois" Clicked="OnDisagreeClicked" />
+             x:Class="BipBip.Views.ComfortConfirmationPage" BackgroundColor="#F3F4F6">
+
+    <StackLayout Padding="20" Spacing="15">
+        <!-- Titre avec un style plus grand et gras -->
+        <Label Text="Le confort, c'est important!" 
+               FontSize="Large" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               VerticalOptions="Start" 
+               TextColor="#333" />
+        <Label Text="Laissez un siège libre à l'arrière."
+               FontSize="Medium" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center" 
+               TextColor="#555" />
+
+        <!-- Espacement vertical pour aérer le design -->
+        <BoxView HeightRequest="20" BackgroundColor="Transparent" />
+
+        <!-- Bouton 'Ça marche!' avec un style plus personnalisé -->
+        <Button Text="Ça marche !" 
+                Clicked="OnAgreeClicked"
+                BackgroundColor="#4CAF50" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                CornerRadius="15" 
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand" />
+
+        <!-- Espacement vertical entre les boutons -->
+        <BoxView HeightRequest="10" BackgroundColor="Transparent" />
+
+        <!-- Bouton 'Non, ils se serreront à trois' avec un style personnalisé -->
+        <Button Text="Non, ils se serreront à trois" 
+                Clicked="OnDisagreeClicked"
+                BackgroundColor="#F44336" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                CornerRadius="15" 
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>

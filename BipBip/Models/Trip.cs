@@ -18,6 +18,8 @@ namespace BipBip.Models
         public string Departure { get; set; }
         public string Arrival { get; set; }
         public DateTime DepartureTime { get; set; }
+        public string DepartureTimeFormatted => DepartureTime.ToString("HH:mm");
+
         public DateTime ArrivalTime { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }

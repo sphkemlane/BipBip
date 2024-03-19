@@ -1,18 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.SetPricePage" BackgroundColor="White">
-    <StackLayout Padding="20">
-        <Label Text="Fixez votre prix par place" />
-        <Stepper x:Name="priceStepper" Minimum="1" Maximum="100" Increment="1" Value="5" ValueChanged="OnStepperValueChanged" />
-        <Label x:Name="priceLabel" Text="5 €" HorizontalOptions="Center" />
+             x:Class="BipBip.Views.SetPricePage" BackgroundColor="#F3F4F6">
+    <StackLayout Padding="20" Spacing="20">
 
-        <!-- Exemple de mise en page pour des prix de trajets similaires -->
+        <!-- Titre de la page -->
+        <Label Text="Fixez votre prix par place"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               TextColor="#2C3E50"/>
 
+        <!-- Stepper pour ajuster le prix -->
+        <Frame BackgroundColor="#ECF0F1" CornerRadius="10" WidthRequest="100">
+            <Label x:Name="priceLabel" Text="5 €" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16" TextColor="#27AE60" />
+        </Frame>
+        <Frame BackgroundColor="#ECF0F1" CornerRadius="20" Padding="10" Margin="0,0,0,0" HorizontalOptions="FillAndExpand">
+            <Stepper x:Name="priceStepper" Minimum="5" Maximum="100"   Margin="80,0,0,0" Increment="1" Value="5" ValueChanged="OnStepperValueChanged" />
+        </Frame>
+        
 
-        <StackLayout>
-            <Button Text="Continuer" Clicked="OnContinueClicked"/>
-        </StackLayout>
+        <!-- Label pour afficher le prix sélectionné -->
+
+        <!-- Phrase informative sur le prix de covoiturage -->
+        <Label Text="Le prix moyen de covoiturage pour ce trajet est de 7 €."
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+               TextColor="#7F8C8D"
+               Margin="0,0,0,20"/>
+
+        <!-- Bouton Continuer avec style -->
+        <Frame BackgroundColor="#3498DB" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand">
+            <Button Text="Continuer" 
+                    Clicked="OnContinueClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25" />
+        </Frame>
     </StackLayout>
-
 </ContentPage>

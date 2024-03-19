@@ -1,10 +1,36 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.InstantBookingPage" BackgroundColor="White">
-    <StackLayout Padding="20">
-        <Label Text="Activez la réservation instantanée pour vos passagers" />
-        <Button Text="Activer la réservation instantanée" Clicked="OnOptionSelected"/>
-        <Button Text="Consulter chaque demande de passager avant qu'elle n'expire" Clicked="OnOptionSelected"/>
+             x:Class="BipBip.Views.InstantBookingPage" BackgroundColor="#ffffff">
+    <StackLayout Padding="20" Spacing="20">
+
+        <!-- Titre avec un style sophistiqué et une couleur subtile -->
+        <Label Text="Activez la réservation instantanée pour vos passagers"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               TextColor="#2C3E50"
+               Margin="0,0,0,20"/>
+
+        <!-- Bouton 'Activer la réservation instantanée' avec une apparence moderne -->
+        <Frame BackgroundColor="#27AE60" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand">
+            <Button Text="Activer la réservation instantanée" 
+                    Clicked="OnOptionSelected"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25" />
+        </Frame>
+
+        <!-- Bouton 'Consulter chaque demande' avec une touche de couleur différente -->
+        <Frame BackgroundColor="#F39C12" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand">
+            <Button Text="Consulter chaque demande de passager avant qu'elle n'expire" 
+                    Clicked="OnOptionSelected"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25" />
+        </Frame>
+
     </StackLayout>
 </ContentPage>

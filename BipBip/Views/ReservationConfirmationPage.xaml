@@ -8,18 +8,64 @@
     NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label FontAttributes="Bold" Text="Confirm Reservation" />
+        <StackLayout Padding="20" Spacing="20">
 
-            <!--  Display trip details  -->
-            <Label Text="{Binding Departure}" />
-            <Label Text="{Binding Arrival}" />
-            <Label Text="{Binding DepartureTime, StringFormat='Date: {0:d}'}" />
-            <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" />
+            <!-- Titre de la page avec un style plus marqué -->
+            <Label Text="Confirm Reservation"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
 
+            <!-- Détails du voyage avec des icônes et des styles séparés pour chaque information -->
+            <StackLayout Spacing="10">
+                <Frame CornerRadius="5" Padding="15" HasShadow="True">
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Image Source="departure_icon.png" VerticalOptions="Center" />
+                        <Label Text="{Binding Departure}"
+                           VerticalOptions="Center"
+                           FontSize="Medium" />
+                    </StackLayout>
+                </Frame>
 
-            <Button Clicked="OnConfirmReservationClicked" Text="Confirm Reservation" />
+                <Frame CornerRadius="5" Padding="15" HasShadow="True">
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Image Source="arrival_icon.png" VerticalOptions="Center" />
+                        <Label Text="{Binding Arrival}"
+                           VerticalOptions="Center"
+                           FontSize="Medium" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="5" Padding="15" HasShadow="True">
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Image Source="calendar_icon.png" VerticalOptions="Center" />
+                        <Label Text="{Binding DepartureTime, StringFormat='Date: {0:dd/MM/yyyy HH:mm}'}"
+                           VerticalOptions="Center"
+                           FontSize="Medium" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="5" Padding="15" HasShadow="True">
+                    <StackLayout Orientation="Horizontal" Spacing="15">
+                        <Image Source="money_icon.png" VerticalOptions="Center" />
+                        <Label Text="{Binding Price, StringFormat='Price: {0:C}'}"
+                           VerticalOptions="Center"
+                           FontSize="Medium" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Bouton de confirmation avec un style attrayant -->
+            <Button Text="Confirm Reservation"
+                FontAttributes="Bold"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                CornerRadius="15"
+                HeightRequest="50"
+                 Clicked="OnConfirmReservationClicked" />
         </StackLayout>
     </ContentPage.Content>
+
 
 </ContentPage>

@@ -61,6 +61,17 @@ namespace BipBip.Views
             int numberOfPersons = Convert.ToInt32(PassengerCountEntry.Text);
 
 
+            Vehicule _vehicule = new Vehicule()
+            {
+                Immatriculation = "AA-123-BB",
+                Modele = "Peugeot 208",
+                Marque = "Peugeot",
+                Type = "Voiture",
+                Couleur = "Rouge",
+                AnneeImmatriculation = 2015,
+                Owner = 0
+            };
+            _vehiculesRepo.AddVehicule(_vehicule);
 
             /*Trip newTrip = new Trip
             {
@@ -89,6 +100,9 @@ namespace BipBip.Views
             Console.WriteLine("matchingTrips: " + matchingTrips.Count);
             foreach (Trip trip in matchingTrips)
             {
+
+                Console.WriteLine("price: " + trip.Price);
+
                 trip.DriverName = _dbService.GetUserByIdAsync(trip.DriverId).Result.FirstName;
                 trip.CarModel = _dbService.GetVehiculeByIdAsync(trip.VehicleId).Result.Modele;
             }
