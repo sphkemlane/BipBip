@@ -1,15 +1,58 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.PassengerCountPage" BackgroundColor="White">
+             x:Class="BipBip.Views.PassengerCountPage"
+             BackgroundColor="#F9FAFB">
+    <StackLayout Padding="20" Spacing="20">
 
+        <Label Text="Combien de passagers BipBip pouvez-vous accepter ?"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               TextColor="#34495E"
+               Margin="0,100,0,10"/>
 
-    <StackLayout Padding="20">
-        <Label Text="Combien de passagers BipBip pouvez-vous accepter ?" />
-        <Stepper x:Name="passengerStepper" Minimum="1" Maximum="4" Increment="1" ValueChanged="OnStepperValueChanged" />
-        <Label x:Name="passengerCountLabel" Text="{Binding Source={x:Reference passengerStepper}, Path=Value}" />
-        <Button Text="Continuer" Clicked="OnContinueClicked" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+            <!-- Bouton moins -->
+            <Button x:Name="decreaseButton"
+                    Text="-"
+                    WidthRequest="40"
+                    BackgroundColor="#3498DB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="OnDecreasePassengerClicked"
+                    FontSize="Large"/>
+
+            <!-- Affichage du nombre de passagers -->
+            <Frame BackgroundColor="#FFFFFF" CornerRadius="10" WidthRequest="120" HasShadow="True">
+                <Label x:Name="passengerCountLabel" 
+                       Text="1"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       FontSize="18" 
+                       TextColor="#27AE60" />
+            </Frame>
+
+            <!-- Bouton plus -->
+            <Button x:Name="increaseButton"
+                    Text="+"
+                    WidthRequest="40"
+                    BackgroundColor="#3498DB"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="OnIncreasePassengerClicked"
+                    FontSize="Large"/>
+        </StackLayout>
+
+        <!-- Cadre pour le bouton Continuer avec une ombre -->
+        <Frame BackgroundColor="#3498DB" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand" HasShadow="True">
+            <Button Text="Continuer" 
+                    Clicked="OnContinueClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25" 
+                    FontSize="18"/>
+        </Frame>
     </StackLayout>
-
-
 </ContentPage>

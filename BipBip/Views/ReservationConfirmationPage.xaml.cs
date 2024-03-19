@@ -22,6 +22,8 @@ namespace BipBip.Views
             trip = selectedTrip;
             _reservationService = new ReservationService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
             _tripService = new TripService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
+            NavigationPage.SetHasNavigationBar(this, false);
+
 
         }
 

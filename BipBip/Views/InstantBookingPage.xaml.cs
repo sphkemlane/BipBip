@@ -19,6 +19,8 @@ namespace BipBip.Views
         {
             InitializeComponent();
             _trip = trip;
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
 
         private async void OnOptionSelected(object sender, System.EventArgs e)

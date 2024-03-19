@@ -9,6 +9,7 @@
                FontSize="Large" 
                FontAttributes="Bold" 
                HorizontalOptions="Center"
+               Margin="0,100,0,0"
                VerticalOptions="Start" 
                TextColor="#333" />
         <Label Text="Laissez un siège libre à l'arrière."
@@ -26,7 +27,7 @@
                 BackgroundColor="#4CAF50" 
                 TextColor="White" 
                 FontAttributes="Bold" 
-                CornerRadius="15" 
+                CornerRadius="10" 
                 HeightRequest="50"
                 HorizontalOptions="FillAndExpand" />
 
@@ -39,7 +40,7 @@
                 BackgroundColor="#F44336" 
                 TextColor="White" 
                 FontAttributes="Bold" 
-                CornerRadius="15" 
+                CornerRadius="10" 
                 HeightRequest="50"
                 HorizontalOptions="FillAndExpand" />
     </StackLayout>

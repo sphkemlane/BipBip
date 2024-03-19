@@ -10,10 +10,10 @@
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"
                TextColor="#2C3E50"
-               Margin="0,0,0,20"/>
+               Margin="0,100,0,20"/>
 
         <!-- Bouton 'Activer la réservation instantanée' avec une apparence moderne -->
-        <Frame BackgroundColor="#27AE60" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand">
+        <Frame BackgroundColor="#27AE60" CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand">
             <Button Text="Activer la réservation instantanée" 
                     Clicked="OnOptionSelected"
                     BackgroundColor="Transparent"
@@ -23,7 +23,7 @@
         </Frame>
 
         <!-- Bouton 'Consulter chaque demande' avec une touche de couleur différente -->
-        <Frame BackgroundColor="#F39C12" CornerRadius="15" Padding="0" HorizontalOptions="FillAndExpand">
+        <Frame BackgroundColor="#3498DB" CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand">
             <Button Text="Consulter chaque demande de passager avant qu'elle n'expire" 
                     Clicked="OnOptionSelected"
                     BackgroundColor="Transparent"

@@ -23,6 +23,8 @@ namespace BipBip.Views
             _trip = trip;
             var viewModel = new ArrivalViewModel(map);
             BindingContext = viewModel;
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
 
         //private async void OnContinueClicked(object sender, System.EventArgs e)

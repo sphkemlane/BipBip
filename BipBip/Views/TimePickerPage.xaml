@@ -1,9 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.TimePickerPage" BackgroundColor="White">
-    <StackLayout Padding="20">
-        <TimePicker x:Name="timePicker" />
-        <Button Text="Continuer" Clicked="OnContinueClicked" />
+             x:Class="BipBip.Views.TimePickerPage"
+             BackgroundColor="#F9FAFB">
+    <StackLayout Padding="20" Spacing="20">
+
+        <Label Text="Choisissez l'heure de départ"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               TextColor="#34495E"
+               Margin="0,100,0,10"/>
+
+        <!-- Customisation du TimePicker -->
+        <TimePicker x:Name="timePicker"
+                    BackgroundColor="Transparent"
+                    TextColor="#27AE60"
+                    Margin="0,0,0,20"/>
+
+        <!-- Cadre pour le bouton Continuer avec une ombre -->
+        <Frame BackgroundColor="#3498DB" CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand" HasShadow="True">
+            <Button Text="Continuer" 
+                    Clicked="OnContinueClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20" />
+        </Frame>
     </StackLayout>
 </ContentPage>

@@ -18,6 +18,8 @@ namespace BipBip.Views
         {
             InitializeComponent();
             _trip = trip;
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
         private void OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
@@ -27,7 +29,6 @@ namespace BipBip.Views
         private async void OnContinueClicked(object sender, System.EventArgs e)
         {
             // Sauvegarder le nombre de passagers choisi et passer à l'étape suivante.
-            var passengerCount = (int)passengerStepper.Value;
 
             _trip.AvailableSeats = passengerCount;
 
@@ -36,6 +37,26 @@ namespace BipBip.Views
             // Naviguer à la page suivante, par exemple la page de confirmation de confort.
             await Navigation.PushAsync(new ComfortConfirmationPage(_trip));
         }
+        private int passengerCount = 1; // Initial count
+
+        private void OnDecreasePassengerClicked(object sender, EventArgs e)
+        {
+            if (passengerCount > 1) // Assuming minimum is 1
+            {
+                passengerCount--;
+                passengerCountLabel.Text = passengerCount.ToString();
+            }
+        }
+
+        private void OnIncreasePassengerClicked(object sender, EventArgs e)
+        {
+            if (passengerCount < 4) // Assuming maximum is 4
+            {
+                passengerCount++;
+                passengerCountLabel.Text = passengerCount.ToString();
+            }
+        }
+
 
     }
 }

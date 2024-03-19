@@ -7,6 +7,7 @@
         <!-- Titre de la page -->
         <Label Text="Fixez votre prix par place"
                FontSize="20"
+               Margin="0,100,0,0"
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"
                TextColor="#2C3E50"/>

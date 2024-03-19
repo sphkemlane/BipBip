@@ -18,8 +18,11 @@ namespace BipBip.Views
         public DeparturePage(Trip trip)
         {
             InitializeComponent();
+
             BindingContext = new DepartureViewModel(map); // Assignation de votre ViewModel comme BindingContext
-            _trip = trip;
+            _trip = trip;  
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
 
 

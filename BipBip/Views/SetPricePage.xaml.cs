@@ -29,6 +29,8 @@ namespace BipBip.Views
             _tripService = new TripService(db); // Make sure this line is added to instantiate TripService
 
             _tripRepo = new TripRepo(db);
+            NavigationPage.SetHasNavigationBar(this, false);
+
 
         }
         private void OnStepperValueChanged(object sender, ValueChangedEventArgs e)
