@@ -44,7 +44,7 @@ namespace BipBip.Views
             var upcomingReservedTrips = allReservedTrips
                 .Where(reservation => _tripService.GetTripById(reservation.TripId).DepartureTime > now)
                 .ToList();
-            
+
             var pastReservedTrips = allReservedTrips
                 .Where(reservation => _tripService.GetTripById(reservation.TripId).DepartureTime <= now)
                 .ToList();
@@ -64,7 +64,7 @@ namespace BipBip.Views
             // Assigne les sources de données aux ListViews correspondantes
             PastReservedTripsCollectionView.ItemsSource = pastReservedTrips;
             ReservedUpcomingTripsCollectionView.ItemsSource = upcomingReservedTrips;
-            
+
         }
 
         // Méthode pour charger les trajets publiés
@@ -102,5 +102,37 @@ namespace BipBip.Views
 
             await Navigation.PushAsync(new MessagePage());
         }
+        private void ShowPublishedUpcomingTrips(object sender, EventArgs e)
+        {
+            SetVisibility(PublishedUpcomingTripsCollectionView);
+        }
+
+        private void ShowPublishedArchivedTrips(object sender, EventArgs e)
+        {
+            SetVisibility(PastPublishedTripsCollectionView);
+        }
+
+        private void ShowReservedUpcomingTrips(object sender, EventArgs e)
+        {
+            SetVisibility(ReservedUpcomingTripsCollectionView);
+        }
+
+        private void ShowReservedArchivedTrips(object sender, EventArgs e)
+        {
+            SetVisibility(PastReservedTripsCollectionView);
+        }
+
+        private void SetVisibility(VisualElement elementToShow)
+        {
+            // Cachez toutes les CollectionViews
+            PublishedUpcomingTripsCollectionView.IsVisible = false;
+            PastPublishedTripsCollectionView.IsVisible = false;
+            ReservedUpcomingTripsCollectionView.IsVisible = false;
+            PastReservedTripsCollectionView.IsVisible = false;
+
+            // Affichez seulement l'élément sélectionné
+            elementToShow.IsVisible = true;
+        }
+
     }
 }
