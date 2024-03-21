@@ -10,6 +10,7 @@ int attr fontProviderSystemFontFamily 0x0
 int attr fontStyle 0x0
 int attr fontVariationSettings 0x0
 int attr fontWeight 0x0
+int attr lStar 0x0
 int attr nestedScrollViewStyle 0x0
 int attr queryPatterns 0x0
 int attr shortcutMatchRequired 0x0
@@ -143,10 +144,12 @@ int style Widget_Compat_NotificationActionText 0x0
 int[] styleable Capability { 0x0, 0x0 }
 int styleable Capability_queryPatterns 0
 int styleable Capability_shortcutMatchRequired 1
-int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5 }
+int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5, 0x1010647, 0x0 }
 int styleable ColorStateListItem_alpha 0
 int styleable ColorStateListItem_android_alpha 1
 int styleable ColorStateListItem_android_color 2
+int styleable ColorStateListItem_android_lStar 3
+int styleable ColorStateListItem_lStar 4
 int[] styleable FontFamily { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable FontFamily_fontProviderAuthority 0
 int styleable FontFamily_fontProviderCerts 1

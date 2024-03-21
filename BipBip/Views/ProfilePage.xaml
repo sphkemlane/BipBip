@@ -71,6 +71,16 @@
 
 
                 </StackLayout>
+                
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                    <!-- Bouton pour ajouter une voiture -->
+                    <ImageButton Source="cariconpng25.png" WidthRequest="60" HeightRequest="60" Clicked="OnAddCarButtonClicked" />
+
+                    <!-- Bouton pour accéder aux préférences -->
+                    <ImageButton Source="hobbiesicon3.png" WidthRequest="60" HeightRequest="60" Clicked="OnPreferencesButtonClicked" />
+                </StackLayout>
+
 
 
 

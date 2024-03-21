@@ -97,6 +97,20 @@ namespace BipBip.Views
         //    base.OnDisappearing();
         //}
 
+        // Naviguer vers la page d'ajout de voiture
+        private async void OnAddCarButtonClicked(object sender, EventArgs e)
+        {
+            Vehicule _vehicule = new Vehicule();
+
+            await Navigation.PushAsync(new AddCarPage1(_vehicule));
+        }
+
+        // Naviguer vers la page des préférences
+        private async void OnPreferencesButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PreferencesPage());
+        }
+
 
 
     }

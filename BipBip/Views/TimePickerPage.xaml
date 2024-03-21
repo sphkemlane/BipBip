@@ -18,6 +18,19 @@
                     TextColor="#27AE60"
                     Margin="0,0,0,20"/>
 
+        <!-- Heure d'arrivée -->
+        <Label Text="Choisissez l'heure d'arrivée"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               TextColor="#34495E"
+               Margin="0,0,0,10"/>
+
+        <TimePicker x:Name="arrivalTimePicker"
+                    BackgroundColor="Transparent"
+                    TextColor="#27AE60"
+                    Margin="0,0,0,20"/>
+
         <!-- Cadre pour le bouton Continuer avec une ombre -->
         <Frame BackgroundColor="#3498DB" CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand" HasShadow="True">
             <Button Text="Continuer" 

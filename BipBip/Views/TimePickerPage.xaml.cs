@@ -27,11 +27,23 @@ namespace BipBip.Views
             // Sauvegarder l'heure choisie et aller à la page suivante
             TimeSpan chosenTime = timePicker.Time;
 
-            //_trip.DepartureDate = _trip.DepartureDate.Date + chosenTime;
-            _trip.ArrivalTime = new DateTime(_trip.ArrivalTime.Year, _trip.ArrivalTime.Month, _trip.ArrivalTime.Day,
+            TimeSpan chosenArrivalTime = arrivalTimePicker.Time;
+
+            
+            _trip.DepartureTime = new DateTime(_trip.DepartureTime.Year, _trip.DepartureTime.Month, _trip.DepartureTime.Day,
                                        chosenTime.Hours, chosenTime.Minutes, 0);
 
+            _trip.ArrivalTime = new DateTime(_trip.DepartureTime.Year, _trip.DepartureTime.Month, _trip.DepartureTime.Day,
+                                       chosenArrivalTime.Hours, chosenArrivalTime.Minutes, 0);
+
+
+
             App.Current.Properties["ChosenTime"] = chosenTime;
+            App.Current.Properties["chosenArrivalTime"] = chosenArrivalTime;
+
+            // Assurez-vous de sauvegarder les propriétés après les avoir mises à jour
+            await App.Current.SavePropertiesAsync();
+
             await Navigation.PushAsync(new DeparturePage(_trip));
         }
     }

@@ -13,9 +13,11 @@ namespace BipBip.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DatePickerPage : ContentPage
     {
+
         private Trip _trip;
         public DatePickerPage(Trip trip)
         {
+
             InitializeComponent();
             _trip = trip;
             NavigationPage.SetHasNavigationBar(this, false);

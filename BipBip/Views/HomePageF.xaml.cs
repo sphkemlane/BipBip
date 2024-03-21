@@ -28,10 +28,41 @@ namespace BipBip.Views
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)
         {
-            Trip _trip = new Trip();
-            // Effectuez la redirection vers la page AddRide
-            await Navigation.PushAsync(new DatePickerPage(_trip));
+            // Supposons que UserSession.Id contienne l'ID de l'utilisateur courant
+            int currentUserId = UserSession.Id;
+
+            var allVehicule =  await _vehiculesRepo.GetVehiculesAsync();
+            Console.WriteLine(allVehicule.Count);
+
+            foreach (var item in allVehicule)
+            {
+                Console.WriteLine("ITEM ID DE VEHC" + item.Id);
+                Console.WriteLine("owner Id" + item.Owner);
+            }
+            // Récupérer la liste des véhicules appartenant à l'utilisateur
+            var vehicles = await _vehiculesRepo.GetVehiculeByUserIdAsync(currentUserId);
+            foreach (var item in vehicles)
+            {
+                Console.WriteLine("blablablabl" + item.Id);
+                Console.WriteLine("blabalbalabl Id" + item.Owner);
+            }
+
+            Console.WriteLine("Vehicules : " + vehicles.Any()); // Imprime true si au moins un véhicule est trouvé, false sinon.
+
+            if (vehicles.Any())
+            {
+                Trip _trip = new Trip();
+                // Effectuez la redirection vers la page AddRide
+                await Navigation.PushAsync(new DatePickerPage(_trip));
+            }
+            else {
+                // L'utilisateur n'a pas de véhicule
+                Vehicule _vehicule = new Vehicule();
+                // Redirection vers AddCarPage1 pour ajouter un véhicule
+                await Navigation.PushAsync(new AddCarPage1(_vehicule));
+            }
         }
+        
 
         private async void OnProfilButtonClicked(object sender, EventArgs e)
         {

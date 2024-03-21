@@ -3,6 +3,7 @@ using BipBip.Repositories;
 using BipBip.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,11 +37,17 @@ namespace BipBip.Views
         private void OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
             priceLabel.Text = $"{e.NewValue} €";
-            // Vous pouvez aussi stocker la valeur du prix dans les propriétés de l'application si nécessaire
-            // App.Current.Properties["SelectedPrice"] = e.NewValue;
+            _trip.Price = (int)e.NewValue; // Mise à jour du prix dans le modèle de données Trip
+
+            App.Current.Properties["SelectedPrice"] = _trip.Price;
+            _trip.DriverId = UserSession.Id;
+            
+            //_tripRepo.InsertTrip(_trip);
+            _tripService.AddTrip(_trip);
         }
         private async void OnContinueClicked(object sender, EventArgs e)
         {
+            
             System.Diagnostics.Debug.WriteLine(" " + _trip.DepartureTime + " " + " " + _trip.ArrivalTime + " " + " " + _trip.Departure + " " + " " + _trip.Arrival + " " + " " + _trip.AvailableSeats + " " + " " + _trip.Price + " ");
             await DisplayAlert("Success", "le trajet a été enregistré avec succès", "OK");
             await Navigation.PushAsync(new HomePageF());

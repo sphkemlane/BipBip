@@ -9,10 +9,10 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
 	<uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />
 	<uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
-	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-feature android:name="android.hardware.camera" android:required="true" />
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND" />

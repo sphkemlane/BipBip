@@ -36,6 +36,7 @@ namespace BipBip.Views
 
         private async void OnRegisterButtonClicked(object sender, EventArgs e)
         {
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ m in");
             var user = new User
             {
                 Name = nameEntry.Text,

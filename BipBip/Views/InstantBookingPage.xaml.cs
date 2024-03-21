@@ -31,6 +31,9 @@ namespace BipBip.Views
             // Vous pouvez naviguer à la page suivante ou terminer le processus
             _trip.ReservationType = button.Text == "Activer la réservation instantanée" ? "Instant" : "OnApproval";
 
+            App.Current.Properties["ReservationType"] = _trip.ReservationType;
+            await App.Current.SavePropertiesAsync();
+
 
             await Navigation.PushAsync(new SetPricePage(_trip));
         }

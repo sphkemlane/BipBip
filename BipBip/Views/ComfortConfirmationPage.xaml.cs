@@ -26,6 +26,7 @@ namespace BipBip.Views
             _trip.LeaveSeatFree = true;
             // L'utilisateur est d'accord pour laisser un siège libre.
             App.Current.Properties["Comfort"] = true;
+            await App.Current.SavePropertiesAsync();
 
             // Passer à l'étape suivante.
             await Navigation.PushAsync(new InstantBookingPage(_trip));

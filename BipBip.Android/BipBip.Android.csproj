@@ -69,10 +69,10 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.116</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>5.0.0.2196</Version>
+      <Version>5.0.0.2622</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -180,8 +180,10 @@
     <AndroidResource Include="Resources\drawable\galery.png" />
     <AndroidResource Include="Resources\drawable\add.png" />
     <AndroidResource Include="Resources\drawable\chat.png" />
+    <AndroidResource Include="Resources\drawable\cariconpng25.png" />
     <Content Include="Resources\drawable\historique.jpg" />
     <AndroidResource Include="Resources\drawable\home2.png" />
+    <AndroidResource Include="Resources\drawable\hobbiesicon3.png" />
     <Content Include="Resources\drawable\profil.jpg" />
     <AndroidResource Include="Resources\drawable\publier.jpg" />
     <AndroidResource Include="Resources\drawable\star_gray.png" />

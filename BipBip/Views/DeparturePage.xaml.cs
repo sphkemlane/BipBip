@@ -36,10 +36,14 @@ namespace BipBip.Views
         {
             if (BindingContext is DepartureViewModel viewModel && viewModel.IsLocationSelected)
             {
+
                 // Assurez-vous que viewModel.SearchText contient l'adresse mise à jour
                 _trip.Departure = viewModel.SearchText;
 
-                // Ensuite, naviguez à la page suivante, par exemple ArrivalPage
+                Application.Current.Properties["DepartureAddress"] = _trip.Departure;
+                await Application.Current.SavePropertiesAsync();
+
+
                 // et passez l'objet _trip mis à jour
                 await Navigation.PushAsync(new ArrivalPage(_trip));
             }

@@ -39,6 +39,10 @@ namespace BipBip.Views
                 // Mettre à jour l'objet _trip avec l'adresse de destination
                 _trip.Arrival = viewModel.SearchText;
 
+
+                Application.Current.Properties["ArrivalAddress"] = _trip.Arrival;
+                await Application.Current.SavePropertiesAsync();
+
                 // Passez à la page suivante, en passant l'objet _trip pour maintenir l'état
                 await Navigation.PushAsync(new PassengerCountPage(_trip));
             }

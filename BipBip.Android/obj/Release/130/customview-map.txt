@@ -1,4 +1,5 @@
 @string/appbar_scrolling_view_behavior;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Release\130\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Release\130\res\mipmap-anydpi-v26\icon_round.xml
 alpha;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\enterfromleft.xml
@@ -7,9 +8,14 @@ androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\B
 androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
 androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\toolbar.xml
+androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+androidx.appcompat.widget.Toolbar;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
 attr;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
+attr;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
 background;obj\Release\130\res\mipmap-anydpi-v26\icon.xml
 background;obj\Release\130\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\100\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -17,22 +23,32 @@ color;obj\Release\130\res\values\colors.xml
 com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
+com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\flyoutcontent.xml
+com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+com.google.android.material.appbar.AppBarLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\shellcontent.xml
 com.google.android.material.bottomnavigation.BottomNavigationView;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\bottomtablayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\fallbacktabbardonotuse.xml
 com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\tabbar.xml
+com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\fallbacktabbardonotuse.xml
+com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+com.google.android.material.tabs.TabLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\tabbar.xml
 declare-styleable;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
+declare-styleable;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
 external-cache-path;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\100\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\100\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Release\130\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Release\130\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\bottomtablayout.xml
 item;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
+item;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
 LinearLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\bottomtablayout.xml
 paths;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\100\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
 resources;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\strings.xml
 resources;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
+resources;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\attrs.xml
+resources;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
 resources;obj\Release\130\res\values\colors.xml
 resources;obj\Release\130\res\values\styles.xml
 set;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\enterfromleft.xml
@@ -41,10 +57,13 @@ set;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\
 set;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\exittoright.xml
 string;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\strings.xml
 style;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
+style;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\values\styles.xml
 style;obj\Release\130\res\values\styles.xml
 translate;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\enterfromleft.xml
 translate;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\enterfromright.xml
 translate;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\exittoleft.xml
 translate;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\anim\exittoright.xml
 xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\rootlayout.xml
 xamarin.forms.platform.android.ShellFlyoutLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\flyoutcontent.xml
+xamarin.forms.platform.android.ShellFlyoutLayout;C:\Users\NABIL NKHILI\OneDrive\Bureau\git-20-03-2024\BipBip\BipBip.Android\obj\Release\130\lp\101\jl\res\layout\flyoutcontent.xml
