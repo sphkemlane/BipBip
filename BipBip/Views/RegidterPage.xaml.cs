@@ -33,10 +33,10 @@ namespace BipBip.Views
         {
             await Navigation.PushAsync(new ConnexionPage());
         }
+        
 
         private async void OnRegisterButtonClicked(object sender, EventArgs e)
         {
-            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ m in");
             var user = new User
             {
                 Name = nameEntry.Text,

@@ -48,7 +48,7 @@ namespace BipBip.Views
             }
 
             Console.WriteLine("Vehicules : " + vehicles.Any()); // Imprime true si au moins un véhicule est trouvé, false sinon.
-
+            
             if (vehicles.Any())
             {
                 Trip _trip = new Trip();

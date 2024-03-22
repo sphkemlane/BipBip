@@ -14,7 +14,8 @@ namespace BipBip
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new RegidterPage());
+
         }
 
         protected override void OnStart()

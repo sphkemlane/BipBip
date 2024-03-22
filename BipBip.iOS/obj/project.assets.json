@@ -2196,24 +2196,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\": {},
+    "D:\\Visual Studio partagé\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\git-20-03-2024\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Saad KEMLANE\\Desktop\\GL\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
       "projectName": "BipBip.iOS",
-      "projectPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\git-20-03-2024\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
-      "packagesPath": "C:\\Users\\NABIL NKHILI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\git-20-03-2024\\BipBip\\BipBip.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\GL\\BipBip\\BipBip.iOS\\BipBip.iOS.csproj",
+      "packagesPath": "C:\\Users\\Saad KEMLANE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Saad KEMLANE\\Desktop\\GL\\BipBip\\BipBip.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Visual Studio partagé\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\NABIL NKHILI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Saad KEMLANE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2227,11 +2227,16 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\git-20-03-2024\\BipBip\\BipBip\\BipBip.csproj": {
-              "projectPath": "C:\\Users\\NABIL NKHILI\\OneDrive\\Bureau\\git-20-03-2024\\BipBip\\BipBip\\BipBip.csproj"
+            "C:\\Users\\Saad KEMLANE\\Desktop\\GL\\BipBip\\BipBip\\BipBip.csproj": {
+              "projectPath": "C:\\Users\\Saad KEMLANE\\Desktop\\GL\\BipBip\\BipBip\\BipBip.csproj"
             }
           }
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2241,9 +2246,21 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "SQLite": {
             "target": "Package",
             "version": "[3.13.0, )"
+          },
+          "SQLite": {
+            "target": "Package",
+            "version": "[3.13.0, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.8.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
@@ -2253,9 +2270,21 @@
             "target": "Package",
             "version": "[5.0.0.2622, )"
           },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2622, )"
+          },
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[5.0.0.2622, )"
+          },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "[5.0.0.2622, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.8.116, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

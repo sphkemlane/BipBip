@@ -6,148 +6,125 @@
     BackgroundColor="White"
     NavigationPage.HasNavigationBar="False">
 
-    <AbsoluteLayout>
-        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-            <Grid Padding="15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="400" />
-                </Grid.RowDefinitions>
+    <Grid Padding="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!--  Pour l'image en haut à droite  -->
+            <RowDefinition Height="100" />
+            <!--  Pour la deuxième image  -->
+            <RowDefinition Height="Auto" />
+            <!--  Pour le titre "Inscription"  -->
+            <RowDefinition Height="*" />
+            <!--  Pour les champs de saisie et le bouton d'inscription  -->
+            <RowDefinition Height="Auto" />
+            <!--  Pour le label "se connecter"  -->
+        </Grid.RowDefinitions>
 
+        <!--  Image en haut à droite, ajustée pour prendre toute la largeur nécessaire  -->
+        <Image
+            Grid.Row="0"
+            Margin="200,-20,-60,-20"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HeightRequest="20"
+            Source="splash1.png" />
 
-                <Image
-                    Grid.Row="0"
-                    Margin="200,-20,-60,-20"
-                    AbsoluteLayout.LayoutFlags="PositionProportional"
-                    HeightRequest="20"
-                    Source="splash1.png" />
+        <!--  Image principale au centre  -->
+        <Image
+            Grid.Row="1"
+            HeightRequest="100"
+            HorizontalOptions="CenterAndExpand"
+            Source="file.png"
+            VerticalOptions="Center" />
 
+        <!--  Titre de la page  -->
+        <Label
+            Grid.Row="2"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Inscription"
+            TextColor="Black" />
 
-                <Image
-                    Grid.Row="1"
-                    HeightRequest="100"
-                    HorizontalOptions="CenterAndExpand"
-                    Source="file.png"
-                    VerticalOptions="Center" />
-                
-                
-                <Label
-                    Grid.Row="2"
-                    Margin="100,0,0,20"
-                    FontAttributes="Bold"
-                    FontSize="30"
-                    Text="Inscription"
+        <!--  Champs de saisie dans un StackLayout pour la structuration  -->
+        <StackLayout Grid.Row="3" Spacing="20">
+            <Frame
+                Padding="5"
+                BackgroundColor="#D6EFF7"
+                CornerRadius="15">
+                <Entry
+                    x:Name="nameEntry"
+                    BackgroundColor="Transparent"
+                    Placeholder="Nom"
                     TextColor="Black" />
-                
-                
-                <StackLayout Grid.Row="3" Spacing="20">
+            </Frame>
 
+            <Frame
+                Padding="5"
+                BackgroundColor="#D6EFF7"
+                CornerRadius="15">
+                <Entry
+                    x:Name="prenomEntry"
+                    BackgroundColor="Transparent"
+                    Placeholder="Prenom"
+                    TextColor="Black" />
+            </Frame>
 
+            <Frame
+                Padding="5"
+                BackgroundColor="#D6EFF7"
+                CornerRadius="15">
+                <Entry
+                    x:Name="emailEntry"
+                    BackgroundColor="Transparent"
+                    Placeholder="Email"
+                    TextColor="Black" />
+            </Frame>
 
+            <Frame
+                Padding="5"
+                BackgroundColor="#D6EFF7"
+                CornerRadius="15">
+                <Entry
+                    x:Name="passwordEntry"
+                    BackgroundColor="Transparent"
+                    IsPassword="True"
+                    Placeholder="Mot de passe"
+                    TextColor="Black" />
+            </Frame>
 
+            <Frame
+                Padding="5"
+                BackgroundColor="#D6EFF7"
+                CornerRadius="15">
+                <Entry
+                    x:Name="phoneEntry"
+                    BackgroundColor="Transparent"
+                    Placeholder="numéro de téléphone"
+                    TextColor="Black" />
+            </Frame>
 
+            <!--  Bouton d'inscription  -->
+            <Button
+                Margin="30,50,30,0"
+                BackgroundColor="#0D47A1"
+                Clicked="OnRegisterButtonClicked"
+                CornerRadius="15"
+                HorizontalOptions="Center"
+                Text="S'inscrire"
+                TextColor="White"
+                WidthRequest="150" />
+        </StackLayout>
 
-
-
-                    <Frame
-                      CornerRadius="15" BackgroundColor="#D6EFF7   " Padding="5">
-                        <Grid>
-                            <Entry
-                           x:Name="nameEntry"
-                           Placeholder="Nom"
-                           TextColor="black"  BackgroundColor="Transparent" />
-                        </Grid>
-                    </Frame>
-
-
-
-
-
-
-                    <Frame
-                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
-                        <Grid>
-                            <Entry
-                           x:Name="prenomEntry"
-                           Placeholder="Prenom"
-                           TextColor="black"  BackgroundColor="Transparent" />
-                        </Grid>
-                    </Frame>
-
-
-
-
-
-                    <Frame
-                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
-                        <Grid>
-                            <Entry
-                           x:Name="emailEntry"
-                           Placeholder="Email"
-                           TextColor="black"  BackgroundColor="Transparent" />
-                        </Grid>
-                    </Frame>
-
-
-
-
-                    <Frame
-                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
-                        <Grid>
-                            <Entry
-                           x:Name="passwordEntry"
-                           IsPassword="True"
-                           Placeholder="Mot de passe"
-                           TextColor="black"  BackgroundColor="Transparent" />
-
-                        </Grid>
-                    </Frame>
-
-
-
-
-                    <Frame
-                       CornerRadius="15" BackgroundColor="#D6EFF7"  Padding="5">
-                        <Grid>
-                            <Entry
-                           x:Name="phoneEntry"
-                           Placeholder="numéro de téléphone"
-                           TextColor="black"  BackgroundColor="Transparent"/>
-                        </Grid>
-                    </Frame>
-
-
-
-
-
-                </StackLayout>
-
-                <Button
-                    Grid.Row="4"
-                    Margin="30,50,0,100"
-                    BackgroundColor="#0D47A1"
-                    Clicked="OnRegisterButtonClicked"
-                    CornerRadius="15"
-                    HorizontalOptions="Center"
-                    Text="S'inscrire"
-                    TextColor="White"
-                    WidthRequest="150" />
-
-                <Label Text="se connecter">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnLabelTapped" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Image
-                    Grid.Row="4"
-                    Margin="20,0,0,20"
-                    AbsoluteLayout.LayoutBounds="0,1,100,100"
-                    AbsoluteLayout.LayoutFlags="PositionProportional"
-                    HeightRequest="30"
-                    Source="splashbas.png" />
-            </Grid>
-        </ScrollView>
-    </AbsoluteLayout>
+        <!--  Label "se connecter" comme un bouton cliquable  -->
+        <Label
+            Grid.Row="4"
+            Margin="0,10"
+            HorizontalOptions="Center"
+            Text="se connecter"
+            VerticalOptions="End">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLabelTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
 </ContentPage>
