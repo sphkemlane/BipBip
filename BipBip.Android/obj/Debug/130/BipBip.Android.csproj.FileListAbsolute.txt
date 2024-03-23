@@ -5118,3 +5118,5 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_Conv
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\historique.jpg
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\profil.jpg

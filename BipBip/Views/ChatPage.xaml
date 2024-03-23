@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.ChatPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:BipBip.Models"
+    BackgroundColor="#F9FAFB"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="DiscussionTemplate">
+                <Frame
+                    Padding="10"
+                    BorderColor="#cccccc"
+                    HasShadow="False">
+                    <Grid Padding="5" ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--  Profile Picture in a circular frame  -->
+                        <Frame
+                            Grid.Column="0"
+                            Padding="0"
+                            BorderColor="Transparent"
+                            CornerRadius="25"
+                            HeightRequest="50"
+                            HorizontalOptions="Start"
+                            IsClippedToBounds="True"
+                            VerticalOptions="Center"
+                            WidthRequest="50">
+                            <Image
+                                Aspect="AspectFill"
+                                HeightRequest="50"
+                                Source="{Binding UserProfilePicture}"
+                                WidthRequest="50" />
+                        </Frame>
+                        <!--  User Name & Last Message  -->
+                        <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label FontAttributes="Bold" Text="{Binding UserName}" />
+                            <Label
+                                FontSize="Small"
+                                Text="{Binding LastMessagePreview}"
+                                TextColor="Gray" />
+                        </StackLayout>
+                        <!--  Last Message Date  -->
+                        <Label
+                            Grid.Column="2"
+                            HorizontalOptions="End"
+                            Text="{Binding LastMessageDate, StringFormat='{0:HH:mm}'}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <CollectionView
+        x:Name="DiscussionsCollectionView"
+        ItemTemplate="{StaticResource DiscussionTemplate}"
+        ItemsSource="{Binding Discussions}"
+        SelectionChanged="OnDiscussionSelected"
+        SelectionMode="Single">
+        <!--  Empty and loading views can go here  -->
+    </CollectionView>
+
+
+</ContentPage>

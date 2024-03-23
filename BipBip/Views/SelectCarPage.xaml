@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.SelectCarPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F9FAFB"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <Label
+                Margin="0,20,0,10"
+                FontAttributes="Bold"
+                FontSize="22"
+                HorizontalTextAlignment="Center"
+                Text="Sélectionnez votre voiture pour le trajet"
+                TextColor="#34495E" />
+
+            <ListView
+                x:Name="carsListView"
+                HasUnevenRows="True"
+                ItemSelected="OnCarSelected"
+                SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="10" BackgroundColor="{Binding BackgroundColor}">
+                                <StackLayout Orientation="Vertical">
+                                    <Label
+                                        Text="{Binding Marque}"
+                                        TextColor="#27AE60"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        HorizontalOptions="EndAndExpand"
+                                        Text="{Binding Modele}"
+                                        TextColor="#34495E"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <!--  Bouton pour confirmer la sélection de la voiture  -->
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="#3498DB"
+                Clicked="OnContinueWithCarClicked"
+                FontAttributes="Bold"
+                Text="Continuer avec cette voiture"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

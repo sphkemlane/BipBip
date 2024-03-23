@@ -181,10 +181,10 @@
     <AndroidResource Include="Resources\drawable\add.png" />
     <AndroidResource Include="Resources\drawable\chat.png" />
     <AndroidResource Include="Resources\drawable\cariconpng25.png" />
-    <Content Include="Resources\drawable\historique.jpg" />
+    <AndroidResource Include="Resources\drawable\historique.jpg" />
     <AndroidResource Include="Resources\drawable\home2.png" />
     <AndroidResource Include="Resources\drawable\hobbiesicon3.png" />
-    <Content Include="Resources\drawable\profil.jpg" />
+    <AndroidResource Include="Resources\drawable\profil.jpg" />
     <AndroidResource Include="Resources\drawable\publier.jpg" />
     <AndroidResource Include="Resources\drawable\star_gray.png" />
     <AndroidResource Include="Resources\drawable\star_yellow.png" />

@@ -72,11 +72,13 @@ namespace BipBip.Views
         {
             // Récupérez tous les trajets publiés par l'utilisateur actuel
             var allPublishedTrips = _tripService.GetPublishedTripsByUserId(UserSession.Id);
-            foreach (var trip in allPublishedTrips)
+
+            // coommenter juste pour tester il faut enlever les commentaires
+            /*foreach (var trip in allPublishedTrips)
             {
                 trip.DriverName = _dbService.GetUserByIdAsync(trip.DriverId).Result.Name;
                 trip.CarModel = _dbService.GetVehiculeByIdAsync(trip.VehicleId).Result.Modele;
-            }
+            }*/
 
             // Divisez les trajets publiés en deux sections : à venir et passés
             var now = DateTime.Now;
@@ -99,8 +101,22 @@ namespace BipBip.Views
         {
             // Get the selected reservation from the binding context
             var selectedReservation = (Reservation)((Button)sender).BindingContext;
+            var discussion = await _dbService.GetDiscussionAsync(UserSession.Id, selectedReservation.Trip.DriverId);
+            if (discussion == null)
+            {
+                Discussion newDiscussion = new Discussion
+                {
+                    UserIdSender = UserSession.Id,
+                    UserIdReceiver = selectedReservation.Trip.DriverId,
+                    UserName = _dbService.GetUserByIdAsync(selectedReservation.Trip.DriverId).Result.Name,
+                };
+                _dbService.SaveDiscussionAsync(newDiscussion);
+                Console.WriteLine("Discussion Id: " + discussion.Id);
+                await Navigation.PushAsync(new ChatDetailPage(newDiscussion));
+            }
+            
+            await Navigation.PushAsync(new ChatDetailPage(discussion));
 
-            await Navigation.PushAsync(new MessagePage());
         }
         private void ShowPublishedUpcomingTrips(object sender, EventArgs e)
         {

@@ -53,7 +53,7 @@ namespace BipBip.Views
             {
                 await database.SaveUserAsync(user);
                 await DisplayAlert("Success", "Vous avez été inscris avec succès!", "OK");
-                await DisplayAlert("mail", $"le mail :{user.Email} a été enregistré", "OK");
+                await Navigation.PushAsync(new ConnexionPage());
             }
             else
             {

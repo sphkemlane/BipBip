@@ -28,26 +28,10 @@ namespace BipBip.Views
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)
         {
-            // Supposons que UserSession.Id contienne l'ID de l'utilisateur courant
             int currentUserId = UserSession.Id;
 
-            var allVehicule =  await _vehiculesRepo.GetVehiculesAsync();
-            Console.WriteLine(allVehicule.Count);
-
-            foreach (var item in allVehicule)
-            {
-                Console.WriteLine("ITEM ID DE VEHC" + item.Id);
-                Console.WriteLine("owner Id" + item.Owner);
-            }
-            // Récupérer la liste des véhicules appartenant à l'utilisateur
+    
             var vehicles = await _vehiculesRepo.GetVehiculeByUserIdAsync(currentUserId);
-            foreach (var item in vehicles)
-            {
-                Console.WriteLine("blablablabl" + item.Id);
-                Console.WriteLine("blabalbalabl Id" + item.Owner);
-            }
-
-            Console.WriteLine("Vehicules : " + vehicles.Any()); // Imprime true si au moins un véhicule est trouvé, false sinon.
             
             if (vehicles.Any())
             {
@@ -79,7 +63,7 @@ namespace BipBip.Views
         private async void OnMessagesButtonClicked(object sender, EventArgs e)
         {
             // Effectuez la redirection vers la page MesReservations
-            await Navigation.PushAsync(new MessagePage());
+            await Navigation.PushAsync(new ChatPage());
         }
 
         private async void OnSearchButtonClicked(object sender, EventArgs e)
@@ -90,42 +74,6 @@ namespace BipBip.Views
             DateTime selectedDate = DatePicker.Date;
             Console.WriteLine("date: " + selectedDate);
             int numberOfPersons = Convert.ToInt32(PassengerCountEntry.Text);
-
-
-            Vehicule _vehicule = new Vehicule()
-            {
-                Immatriculation = "AA-123-BB",
-                Modele = "Peugeot 208",
-                Marque = "Peugeot",
-                Type = "Voiture",
-                Couleur = "Rouge",
-                AnneeImmatriculation = 2015,
-                Owner = 0
-            };
-            _vehiculesRepo.AddVehicule(_vehicule);
-
-            /*Trip newTrip = new Trip
-            {
-                DriverId = 1,
-                VehicleId = 1,
-                Departure = "Lyon",
-                Arrival = "Marseille",
-                DepartureTime = DateTime.Now, 
-                AvailableSeats = 3,
-                Price = 25.0,
-            };
-            Trip newTrip1 = new Trip
-            {
-                DriverId = 1,
-                VehicleId = 1,
-                Departure = "Lyon",
-                Arrival = "Marseille",
-                DepartureTime = DateTime.Now.AddMinutes(45),
-                AvailableSeats = 3,
-                Price = 35.0,
-            };
-            _tripService.AddTrip(newTrip);
-            _tripService.AddTrip(newTrip1);*/
 
             List<Trip> matchingTrips = _tripService.SearchTrips(departure, destination, selectedDate, numberOfPersons);
             Console.WriteLine("matchingTrips: " + matchingTrips.Count);

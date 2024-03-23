@@ -25,6 +25,9 @@
     <EmbeddedResource Update="Views\ArrivalPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChatDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ChoosePhotoControl.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -40,10 +43,13 @@
     <EmbeddedResource Update="Views\DeparturePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\InstantBookingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChatPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SelectCarPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PassengerCountPage.xaml">
@@ -89,6 +95,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ChatDetailPage.xaml.cs">
+      <DependentUpon>ChatDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SelectCarPage.xaml.cs">
+      <DependentUpon>SelectCarPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\RatePage.xaml.cs">
       <DependentUpon>RatePage.xaml</DependentUpon>
     </Compile>

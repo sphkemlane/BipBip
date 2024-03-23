@@ -241,12 +241,10 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\Co
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ConnexionPage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\DatePickerPage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\DeparturePage.xaml.g.cs
-C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\HomePageF.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\InstantBookingPage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
-C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MessagePage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\MesTrajets.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\PassengerCountPage.xaml.g.cs
@@ -268,3 +266,6 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\XamlC.st
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.dll
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\refint\BipBip.dll
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\BipBip.pdb
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\SelectCarPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ChatPage.xaml.g.cs
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip\obj\Debug\netstandard2.0\Views\ChatDetailPage.xaml.g.cs

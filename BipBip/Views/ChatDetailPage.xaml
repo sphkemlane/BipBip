@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.ChatDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BipBip.Views"
+    Title="Chat">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SenderToAlignmentConverter x:Key="SenderToAlignmentConverter" />
+            <local:SenderToColorConverter x:Key="SenderToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Spacing="10">
+        <ListView
+            x:Name="MessagesListView"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Messages}"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Padding="10"
+                            HorizontalOptions="{Binding UserIdSender, Converter={StaticResource SenderToAlignmentConverter}}"
+                            Orientation="Horizontal">
+                            <Frame
+                                BackgroundColor="{Binding UserIdSender, Converter={StaticResource SenderToColorConverter}}"
+                                CornerRadius="10"
+                                OutlineColor="Gray">
+                                <Label
+                                    Text="{Binding Content}"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal">
+            <Entry
+                x:Name="MessageEntry"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Type your message" />
+            <Button Clicked="OnSendMessage" Text="Send" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

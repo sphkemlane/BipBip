@@ -24,16 +24,7 @@ namespace BipBip.Repositories
         {
             try
             {
-                await _connection.InsertAsync(new Vehicule
-                {
-                    Immatriculation = vehicule.Immatriculation,
-                    Type = vehicule.Type,
-                    Marque = vehicule.Marque,
-                    Modele = vehicule.Modele,
-                    Couleur = vehicule.Couleur,
-                    AnneeImmatriculation = vehicule.AnneeImmatriculation
-
-                });
+                await _connection.InsertAsync(vehicule);
                 statusMessage = $"{vehicule.Immatriculation} ajouté";
             }
             catch (Exception ex)

@@ -24,6 +24,7 @@ namespace BipBip.Views
         {
             InitializeComponent();
             _trip = trip;
+            _trip.Price = 5; // Prix par défaut
 
             //récupérer le chemin de la base de données 
             string db = DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3");
@@ -40,17 +41,11 @@ namespace BipBip.Views
             _trip.Price = (int)e.NewValue; // Mise à jour du prix dans le modèle de données Trip
 
             App.Current.Properties["SelectedPrice"] = _trip.Price;
-            _trip.DriverId = UserSession.Id;
-            
-            //_tripRepo.InsertTrip(_trip);
-            _tripService.AddTrip(_trip);
+
         }
         private async void OnContinueClicked(object sender, EventArgs e)
         {
-            
-            System.Diagnostics.Debug.WriteLine(" " + _trip.DepartureTime + " " + " " + _trip.ArrivalTime + " " + " " + _trip.Departure + " " + " " + _trip.Arrival + " " + " " + _trip.AvailableSeats + " " + " " + _trip.Price + " ");
-            await DisplayAlert("Success", "le trajet a été enregistré avec succès", "OK");
-            await Navigation.PushAsync(new HomePageF());
+            await Navigation.PushAsync(new SelectCarPage(_trip));
 
         }
     }
