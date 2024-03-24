@@ -1,42 +1,60 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.PreferencesPage"
-             BackgroundColor="#FFFFFF">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.PreferencesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#FFFFFF">
 
     <ContentPage.Content>
 
-        <StackLayout Padding="20" Spacing="20" VerticalOptions="Start">
+        <StackLayout
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Start">
 
-            <!-- Titre de la section -->
-            <Label Text="Sélectionnez vos préférences de covoiturage" 
-                   FontSize="Large" 
-                   HorizontalOptions="Center" 
-                   FontAttributes="Bold"/>
+            <!--  Titre de la section  -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Sélectionnez vos préférences de covoiturage" />
 
-            <!-- Préférence pour fumer -->
-            <CheckBox x:Name="SmokingPreference" IsChecked="{Binding Smoking, Mode=TwoWay}" Color="#007AFF"/>
+            <!--  Préférence pour fumer  -->
+            <CheckBox
+                x:Name="SmokingPreference"
+                IsChecked="{Binding Smoking, Mode=TwoWay}"
+                Color="#007AFF" />
             <Label Text="Fumeur" />
 
-            <!-- Préférence pour la musique -->
-            <CheckBox x:Name="MusicPreference" IsChecked="{Binding Music, Mode=TwoWay}"  Color="#007AFF"/>
+            <!--  Préférence pour la musique  -->
+            <CheckBox
+                x:Name="MusicPreference"
+                IsChecked="{Binding Music, Mode=TwoWay}"
+                Color="#007AFF" />
             <Label Text="Musique" />
 
-            <!-- Préférence pour la discussion -->
-            <CheckBox x:Name="ConversationPreference" IsChecked="{Binding Conversation, Mode=TwoWay}" Color="#007AFF"/>
+            <!--  Préférence pour la discussion  -->
+            <CheckBox
+                x:Name="ConversationPreference"
+                IsChecked="{Binding Conversation, Mode=TwoWay}"
+                Color="#007AFF" />
             <Label Text="Discussion" />
 
-            <!-- Préférence pour manger -->
-            <CheckBox x:Name="EatingPreference" IsChecked="{Binding Eating, Mode=TwoWay}" Color="#007AFF"/>
+            <!--  Préférence pour manger  -->
+            <CheckBox
+                x:Name="EatingPreference"
+                IsChecked="{Binding Eating, Mode=TwoWay}"
+                Color="#007AFF" />
             <Label Text="Manger" />
 
-            <!-- Bouton de confirmation -->
-            <Button Text="Enregistrer les préférences" 
-                    Command="{Binding SavePreferencesCommand}" 
-                    BackgroundColor="#007AFF" 
-                    TextColor="White" 
-                    CornerRadius="20"
-                    Margin="0,20,0,0"/>
+            <!--  Bouton de confirmation  -->
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="#007AFF"
+                Command="{Binding SavePreferencesCommand}"
+                CornerRadius="15"
+                Text="Enregistrer les préférences"
+                TextColor="White" />
 
 
 
@@ -47,4 +65,3 @@
     </ContentPage.Content>
 </ContentPage>
 
-    

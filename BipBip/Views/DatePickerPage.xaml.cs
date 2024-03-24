@@ -20,7 +20,7 @@ namespace BipBip.Views
 
             InitializeComponent();
             _trip = trip;
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this,false);
 
         }
 

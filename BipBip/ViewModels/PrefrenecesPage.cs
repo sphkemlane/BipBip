@@ -8,7 +8,8 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.IO;
 using System.Threading.Tasks;
-using System.ComponentModel; // Assurez-vous d'inclure cet espace de noms pour INotifyPropertyChanged
+using System.ComponentModel;
+using BipBip.Views; // Assurez-vous d'inclure cet espace de noms pour INotifyPropertyChanged
 
 namespace BipBip.ViewModels
 {

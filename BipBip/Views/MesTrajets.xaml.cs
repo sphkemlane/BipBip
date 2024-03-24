@@ -110,7 +110,7 @@ namespace BipBip.Views
                     UserIdReceiver = selectedReservation.Trip.DriverId,
                     UserName = _dbService.GetUserByIdAsync(selectedReservation.Trip.DriverId).Result.Name,
                 };
-                _dbService.SaveDiscussionAsync(newDiscussion);
+                await _dbService.SaveDiscussionAsync(newDiscussion);
                 Console.WriteLine("Discussion Id: " + discussion.Id);
                 await Navigation.PushAsync(new ChatDetailPage(newDiscussion));
             }

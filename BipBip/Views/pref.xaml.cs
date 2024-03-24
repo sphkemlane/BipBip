@@ -17,6 +17,8 @@ namespace BipBip.Views
         {
             InitializeComponent();
             BindingContext = new CarpoolPreferencesViewModel();
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
 
         protected override async void OnAppearing()

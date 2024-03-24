@@ -2,20 +2,54 @@
 <ContentPage
     x:Class="BipBip.Views.AddCarPage2"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
-    <StackLayout BackgroundColor="White">
-        <Button Clicked="OnPreviousButtonClicked" Text="←" />
-
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F9FAFB">
+    <StackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="Center">
         <Label
-            HorizontalOptions="CenterAndExpand"
-            Text="Ajouter une voiture - Page 2"
-            VerticalOptions="CenterAndExpand" />
+            Margin="0,-20,0,20"
+            FontAttributes="Bold"
+            FontSize="22"
+            HorizontalTextAlignment="Center"
+            Text="Sélectionnez le type de votre véhicule"
+            TextColor="#34495E" />
 
-        <Entry x:Name="TypeVehiculeEntry" Placeholder="Type de véhicule" />
+        <!--  Groupement pour RadioButtons  -->
+        <StackLayout>
+            <RadioButton
+                x:Name="VoitureRadioButton"
+                Content="Voiture"
+                FontSize="16"
+                GroupName="VehicleType"
+                TextColor="#34495E"
+                Value="Voiture" />
+            <RadioButton
+                x:Name="ScooterRadioButton"
+                Content="Scooter"
+                FontSize="16"
+                GroupName="VehicleType"
+                TextColor="#34495E"
+                Value="Scooter" />
 
+        </StackLayout>
 
-        <Button Clicked="OnNextButtonClicked" Text="Suivant" />
-
+        <!--  Cadre pour le bouton Suivant avec une ombre et un style visuel attractif  -->
+        <Frame
+            Padding="0"
+            BackgroundColor="#3498DB"
+            CornerRadius="15"
+            HasShadow="True"
+            HorizontalOptions="FillAndExpand">
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="OnNextButtonClicked"
+                CornerRadius="15"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Suivant"
+                TextColor="White" />
+        </Frame>
     </StackLayout>
 </ContentPage>

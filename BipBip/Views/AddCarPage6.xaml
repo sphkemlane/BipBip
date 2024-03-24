@@ -3,18 +3,47 @@
     x:Class="BipBip.Views.AddCarPage6"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F9FAFB"
     NavigationPage.HasNavigationBar="False">
-
-    <StackLayout BackgroundColor="White">
-        <Button Clicked="OnPreviousButtonClicked" Text="←" />
+    <StackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="Center">
 
         <Label
-            HorizontalOptions="CenterAndExpand"
-            Text="Ajouter une voiture - Page 6"
-            VerticalOptions="CenterAndExpand" />
+            Margin="0,-20,0,20"
+            FontAttributes="Bold"
+            FontSize="22"
+            HorizontalTextAlignment="Center"
+            Text="Ajouter l'année d'immatriculation"
+            TextColor="#34495E" />
 
-        <Entry x:Name="AnneeImmatriculationEntry" Placeholder="Année d'immatriculation" />
+        <Entry
+            x:Name="AnneeImmatriculationEntry"
+            Margin="0,0,0,20"
+            BackgroundColor="Transparent"
+            FontSize="16"
+            HorizontalOptions="FillAndExpand"
+            Placeholder="Année d'immatriculation"
+            PlaceholderColor="#95A5A6"
+            TextColor="#34495E" />
 
-        <Button Clicked="OnFinishButtonClicked" Text="Terminer" />
+        <!--  Cadre pour le bouton Terminer avec une ombre et un style visuel attractif  -->
+        <Frame
+            Padding="0"
+            BackgroundColor="#3498DB"
+            CornerRadius="15"
+            HasShadow="True"
+            HorizontalOptions="FillAndExpand">
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="OnFinishButtonClicked"
+                CornerRadius="15"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="Terminer"
+                TextColor="White" />
+        </Frame>
+
     </StackLayout>
 </ContentPage>

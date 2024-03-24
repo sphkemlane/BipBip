@@ -14,11 +14,14 @@ namespace BipBip.Views
         }
         private void OnNextButtonClicked(object sender, EventArgs e)
         {
-            string typeVehiculeValue = TypeVehiculeEntry.Text;
-
-            // Stockez la valeur dans l'objet Vehicule
-            _vehicule.Type = typeVehiculeValue;
-
+            if (VoitureRadioButton.IsChecked)
+            {
+                _vehicule.Type = VoitureRadioButton.Value.ToString();
+            }
+            else if (ScooterRadioButton.IsChecked)
+            {
+                _vehicule.Type = ScooterRadioButton.Value.ToString();
+            }
             Navigation.PushAsync(new AddCarPage3(_vehicule));
         }
 
