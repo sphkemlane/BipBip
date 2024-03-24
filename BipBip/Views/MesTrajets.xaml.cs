@@ -35,6 +35,7 @@ namespace BipBip.Views
             foreach (var reservation in allReservedTrips)
             {
                 reservation.Trip = _tripService.GetTripById(reservation.TripId);
+                reservation.Trip.Driver = _dbService.GetUserByIdAsync(reservation.Trip.DriverId).Result;
                 reservation.Trip.DriverName = _dbService.GetUserByIdAsync(reservation.Trip.DriverId).Result.Name;
                 reservation.Trip.CarModel = _dbService.GetVehiculeByIdAsync(reservation.Trip.VehicleId).Result.Modele;
             }
@@ -73,12 +74,12 @@ namespace BipBip.Views
             // Récupérez tous les trajets publiés par l'utilisateur actuel
             var allPublishedTrips = _tripService.GetPublishedTripsByUserId(UserSession.Id);
 
-            // coommenter juste pour tester il faut enlever les commentaires
-            /*foreach (var trip in allPublishedTrips)
+            foreach (var trip in allPublishedTrips)
             {
                 trip.DriverName = _dbService.GetUserByIdAsync(trip.DriverId).Result.Name;
+                trip.Driver = _dbService.GetUserByIdAsync(trip.DriverId).Result;
                 trip.CarModel = _dbService.GetVehiculeByIdAsync(trip.VehicleId).Result.Modele;
-            }*/
+            }
 
             // Divisez les trajets publiés en deux sections : à venir et passés
             var now = DateTime.Now;
@@ -111,11 +112,11 @@ namespace BipBip.Views
                     UserName = _dbService.GetUserByIdAsync(selectedReservation.Trip.DriverId).Result.Name,
                 };
                 await _dbService.SaveDiscussionAsync(newDiscussion);
-                Console.WriteLine("Discussion Id: " + discussion.Id);
                 await Navigation.PushAsync(new ChatDetailPage(newDiscussion));
             }
+            else { await Navigation.PushAsync(new ChatDetailPage(discussion)); }
             
-            await Navigation.PushAsync(new ChatDetailPage(discussion));
+            
 
         }
         private void ShowPublishedUpcomingTrips(object sender, EventArgs e)

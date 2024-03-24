@@ -20,39 +20,156 @@
                         <Frame
                             Margin="10"
                             BackgroundColor="White"
-                            BorderColor="Gray"
-                            CornerRadius="10"
+                            BorderColor="DarkGray"
+                            CornerRadius="50"
                             HasShadow="True">
-                            <StackLayout Padding="10">
-                                <!--  Heure et Date de Départ  -->
+                            <Grid
+                                Padding="15"
+                                ColumnSpacing="15"
+                                RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="FillAndExpand"
+                                    WidthRequest="2" />
                                 <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="-50,0,0,0"
                                     FontAttributes="Bold"
-                                    FontSize="Medium"
-                                    Text="{Binding DepartureTime, StringFormat='{0:dd/MM/yyyy HH:mm}'}" />
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding DepartureTimeFormatted}"
+                                    VerticalOptions="End" />
 
-                                <!--  Prix  -->
-                                <Label FontSize="Small" Text="{Binding Price, StringFormat='Prix : {0:C}'}" />
-
-                                <!--  Nom du Conducteur  -->
                                 <Label
-                                    FontAttributes="Italic"
-                                    FontSize="Small"
-                                    Text="{Binding DriverName}" />
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Margin="-50,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding ArrivalTimeFormatted}"
+                                    VerticalOptions="Start" />
 
-                                <!--  Modèle de Voiture  -->
-                                <Label FontSize="Small" Text="{Binding CarModel}" />
 
-                                <!--  Bouton d'Action (par exemple : Modifier ou Détails)  -->
-                                <Button
-                                    Margin="5"
-                                    BackgroundColor="#2196F3"
-                                    Command="{Binding ViewDetailsCommand}"
-                                    CommandParameter="{Binding .}"
-                                    CornerRadius="5"
-                                    FontSize="Small"
-                                    Text="Détails"
-                                    TextColor="White" />
-                            </StackLayout>
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Departure}"
+                                    TextColor="Black"
+                                    VerticalOptions="End" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Margin="0,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Arrival}"
+                                    TextColor="Black"
+                                    VerticalOptions="Start" />
+
+                                <Image
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Margin="-160,-220,0,0"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="data.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="80" />
+
+
+                                <!--  Price  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalOptions="Start"
+                                    Orientation="Horizontal"
+                                    Spacing="10"
+                                    VerticalOptions="End">
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="2"
+                                        VerticalOptions="Center">
+                                        <Label
+                                            Margin="10,-10,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="18"
+                                            Text="{Binding DriverName}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                        <StackLayout
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+                                            <Image
+                                                Margin="0,-0,0,0"
+                                                HeightRequest="20"
+                                                Source="star.png"
+                                                VerticalOptions="Center"
+                                                WidthRequest="20" />
+                                            <Label
+                                                Margin="0,-00,0,0"
+                                                FontSize="18"
+                                                Text="{Binding Driver.AverageRating}"
+                                                VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <!--  End of Vertical StackLayout  -->
+
+                                    <Frame
+                                        Grid.Row="1"
+                                        Margin="-140,-25,40,0"
+                                        Padding="0"
+                                        BorderColor="Aqua"
+                                        CornerRadius="90"
+                                        HasShadow="True"
+                                        HeightRequest="70"
+                                        HorizontalOptions="CenterAndExpand"
+                                        IsClippedToBounds="true"
+                                        VerticalOptions="Center"
+                                        WidthRequest="70">
+
+
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="{Binding Driver.ProfilePicturePath}"
+                                            WidthRequest="50" />
+
+                                    </Frame>
+
+                                </StackLayout>
+
+
+
+                            </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -66,23 +183,156 @@
                         <Frame
                             Margin="10"
                             BackgroundColor="White"
-                            BorderColor="Gray"
-                            CornerRadius="10"
+                            BorderColor="DarkGray"
+                            CornerRadius="50"
                             HasShadow="True">
-                            <StackLayout Padding="10">
-                                <Label
-                                    FontAttributes="Bold"
-                                    FontSize="Medium"
-                                    Text="{Binding DepartureTime, StringFormat='{0:dd/MM/yyyy HH:mm}'}" />
-                                <Label FontSize="Small" Text="{Binding Price, StringFormat='Prix : {0:C}'}" />
-                                <Label
-                                    FontAttributes="Italic"
-                                    FontSize="Small"
-                                    Text="{Binding DriverName}" />
-                                <Label FontSize="Small" Text="{Binding CarModel}" />
-                                <!--  Bouton pour envoyer un message au conducteur  -->
+                            <Grid
+                                Padding="15"
+                                ColumnSpacing="15"
+                                RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
-                            </StackLayout>
+                                <BoxView
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="FillAndExpand"
+                                    WidthRequest="2" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="-50,0,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding DepartureTimeFormatted}"
+                                    VerticalOptions="End" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Margin="-50,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding ArrivalTimeFormatted}"
+                                    VerticalOptions="Start" />
+
+
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Departure}"
+                                    TextColor="Black"
+                                    VerticalOptions="End" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Margin="0,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Arrival}"
+                                    TextColor="Black"
+                                    VerticalOptions="Start" />
+
+                                <Image
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Margin="-160,-220,0,0"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="data.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="80" />
+
+
+                                <!--  Price  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalOptions="Start"
+                                    Orientation="Horizontal"
+                                    Spacing="10"
+                                    VerticalOptions="End">
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="2"
+                                        VerticalOptions="Center">
+                                        <Label
+                                            Margin="10,-10,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="18"
+                                            Text="{Binding DriverName}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                        <StackLayout
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+                                            <Image
+                                                Margin="0,-0,0,0"
+                                                HeightRequest="20"
+                                                Source="star.png"
+                                                VerticalOptions="Center"
+                                                WidthRequest="20" />
+                                            <Label
+                                                Margin="0,-00,0,0"
+                                                FontSize="18"
+                                                Text="{Binding Driver.AverageRating}"
+                                                VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <!--  End of Vertical StackLayout  -->
+
+                                    <Frame
+                                        Grid.Row="1"
+                                        Margin="-140,-25,40,0"
+                                        Padding="0"
+                                        BorderColor="Aqua"
+                                        CornerRadius="90"
+                                        HasShadow="True"
+                                        HeightRequest="70"
+                                        HorizontalOptions="CenterAndExpand"
+                                        IsClippedToBounds="true"
+                                        VerticalOptions="Center"
+                                        WidthRequest="70">
+
+
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="{Binding Driver.ProfilePicturePath}"
+                                            WidthRequest="50" />
+
+                                    </Frame>
+
+                                </StackLayout>
+
+
+
+                            </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -96,38 +346,162 @@
                         <Frame
                             Margin="10"
                             BackgroundColor="White"
-                            BorderColor="Gray"
-                            CornerRadius="10"
+                            BorderColor="DarkGray"
+                            CornerRadius="50"
                             HasShadow="True">
-                            <StackLayout Padding="10">
+                            <Grid
+                                Padding="15"
+                                ColumnSpacing="15"
+                                RowSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="FillAndExpand"
+                                    WidthRequest="2" />
                                 <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="-50,0,0,0"
                                     FontAttributes="Bold"
-                                    FontSize="Medium"
-                                    Text="{Binding Trip.DepartureTime, StringFormat='{0:dd/MM/yyyy HH:mm}'}" />
-                                <Label FontSize="Small" Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Trip.DepartureTimeFormatted}"
+                                    VerticalOptions="End" />
+
                                 <Label
-                                    FontAttributes="Italic"
-                                    FontSize="Small"
-                                    Text="{Binding Trip.DriverName}" />
-                                <Label FontSize="Small" Text="{Binding Trip.CarModel}" />
-                                <Button
-                                    Margin="5"
-                                    BackgroundColor="#2196F3"
-                                    Clicked="OnMessageButtonClicked"
-                                    CornerRadius="5"
-                                    FontSize="Small"
-                                    Text="Envoyer un message"
-                                    TextColor="White" />
-                                <Button
-                                    Margin="5"
-                                    BackgroundColor="#E53935"
-                                    Command="{Binding CancelReservationCommand}"
-                                    CommandParameter="{Binding .}"
-                                    CornerRadius="5"
-                                    FontSize="Small"
-                                    Text="Annuler la réservation"
-                                    TextColor="White" />
-                            </StackLayout>
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Margin="-50,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Trip.ArrivalTimeFormatted}"
+                                    VerticalOptions="Start" />
+
+
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Trip.Departure}"
+                                    TextColor="Black"
+                                    VerticalOptions="End" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Margin="0,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Trip.Arrival}"
+                                    TextColor="Black"
+                                    VerticalOptions="Start" />
+
+                                <Image
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Margin="-160,-220,0,0"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="data.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="80" />
+
+
+                                <!--  Price  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Trip.Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalOptions="Start"
+                                    Orientation="Horizontal"
+                                    Spacing="10"
+                                    VerticalOptions="End">
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="2"
+                                        VerticalOptions="Center">
+                                        <Label
+                                            Margin="10,-10,-70,0"
+                                            FontAttributes="Bold"
+                                            FontSize="15"
+                                            Text="{Binding Trip.DriverName}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                        <StackLayout
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+                                            <Image
+                                                Margin="0,-0,0,0"
+                                                HeightRequest="20"
+                                                Source="star.png"
+                                                VerticalOptions="Center"
+                                                WidthRequest="20" />
+                                            <Label
+                                                Margin="0,-00,0,0"
+                                                FontSize="18"
+                                                Text="{Binding Trip.Driver.AverageRating}"
+                                                VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <!--  End of Vertical StackLayout  -->
+
+                                    <Frame
+                                        Grid.Row="1"
+                                        Margin="-140,-25,40,0"
+                                        Padding="0"
+                                        BorderColor="Aqua"
+                                        CornerRadius="90"
+                                        HasShadow="True"
+                                        HeightRequest="70"
+                                        HorizontalOptions="CenterAndExpand"
+                                        IsClippedToBounds="true"
+                                        VerticalOptions="Center"
+                                        WidthRequest="70">
+
+
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="{Binding Trip.Driver.ProfilePicturePath}"
+                                            WidthRequest="50" />
+
+                                    </Frame>
+                                    <Button
+                                        Margin="40,0,0,20"
+                                        BackgroundColor="#2196F3"
+                                        Clicked="OnMessageButtonClicked"
+                                        CornerRadius="5"
+                                        Text="Contacter"
+                                        TextColor="White" />
+                                </StackLayout>
+
+
+
+                            </Grid>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -141,90 +515,177 @@
                         <Frame
                             Margin="10"
                             BackgroundColor="White"
-                            BorderColor="Gray"
-                            CornerRadius="10"
+                            BorderColor="DarkGray"
+                            CornerRadius="50"
                             HasShadow="True">
-                            <Grid Padding="15">
+                            <Grid
+                                Padding="15"
+                                ColumnSpacing="15"
+                                RowSpacing="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
-                                <!--  Heure et Date de Départ  -->
+                                <BoxView
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="FillAndExpand"
+                                    WidthRequest="2" />
                                 <Label
                                     Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="-50,0,0,0"
                                     FontAttributes="Bold"
                                     FontSize="16"
-                                    Text="{Binding Trip.DepartureTime, StringFormat='{0:dd/MM/yyyy HH:mm}'}" />
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Trip.DepartureTimeFormatted}"
+                                    VerticalOptions="End" />
 
-                                <!--  Départ  -->
-                                <Label
-                                    Grid.Row="1"
-                                    Margin="0,5,0,0"
-                                    FontSize="14"
-                                    Text="{Binding Trip.Departure}" />
-
-                                <!--  Arrivée  -->
                                 <Label
                                     Grid.Row="2"
-                                    Margin="0,5,0,0"
-                                    FontSize="14"
-                                    Text="{Binding Trip.Arrival}" />
+                                    Grid.Column="0"
+                                    Margin="-50,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Trip.ArrivalTimeFormatted}"
+                                    VerticalOptions="Start" />
 
-                                <!--  Prix  -->
+
+
                                 <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Trip.Departure}"
+                                    TextColor="Black"
+                                    VerticalOptions="End" />
+
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Margin="0,30,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Trip.Arrival}"
+                                    TextColor="Black"
+                                    VerticalOptions="Start" />
+
+                                <Image
                                     Grid.Row="3"
-                                    Margin="0,5,0,0"
-                                    FontSize="14"
-                                    Text="{Binding Trip.Price, StringFormat='Prix : {0:C}'}" />
+                                    Grid.Column="1"
+                                    Margin="-160,-220,0,0"
+                                    HeightRequest="100"
+                                    HorizontalOptions="Center"
+                                    Source="data.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="80" />
 
-                                <!--  Nom du Conducteur  -->
+
+                                <!--  Price  -->
                                 <Label
-                                    Grid.Row="4"
-                                    Margin="0,5,0,0"
-                                    FontAttributes="Italic"
-                                    FontSize="14"
-                                    Text="{Binding Trip.DriverName}" />
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Trip.Price, StringFormat='{0:C}'}"
+                                    VerticalOptions="End" />
+                                <StackLayout
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="2"
+                                    HorizontalOptions="Start"
+                                    Orientation="Horizontal"
+                                    Spacing="10"
+                                    VerticalOptions="End">
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="2"
+                                        VerticalOptions="Center">
+                                        <Label
+                                            Margin="10,-10,-70,0"
+                                            FontAttributes="Bold"
+                                            FontSize="15"
+                                            Text="{Binding Trip.DriverName}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                        <StackLayout
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+                                            <Image
+                                                Margin="0,-0,0,0"
+                                                HeightRequest="20"
+                                                Source="star.png"
+                                                VerticalOptions="Center"
+                                                WidthRequest="20" />
+                                            <Label
+                                                Margin="0,-00,0,0"
+                                                FontSize="18"
+                                                Text="{Binding Trip.Driver.AverageRating}"
+                                                VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <!--  End of Vertical StackLayout  -->
 
-                                <!--  Modèle de Voiture  -->
-                                <Label
-                                    Grid.Row="5"
-                                    Margin="0,5,0,5"
-                                    FontSize="14"
-                                    Text="{Binding Trip.CarModel}" />
+                                    <Frame
+                                        Grid.Row="1"
+                                        Margin="-140,-25,40,0"
+                                        Padding="0"
+                                        BorderColor="Aqua"
+                                        CornerRadius="90"
+                                        HasShadow="True"
+                                        HeightRequest="70"
+                                        HorizontalOptions="CenterAndExpand"
+                                        IsClippedToBounds="true"
+                                        VerticalOptions="Center"
+                                        WidthRequest="70">
 
-                                <!--  Bouton Évaluer  -->
-                                <Button
-                                    Grid.Row="6"
-                                    Margin="0,10,0,0"
-                                    BackgroundColor="#2196F3"
-                                    Clicked="OnRateButtonClicked"
-                                    CornerRadius="20"
-                                    FontSize="14"
-                                    IsVisible="{Binding RatingVisible}"
-                                    Text="Évaluer"
-                                    TextColor="White" />
 
-                                <!--  Label "déjà évalué"  -->
-                                <Label
-                                    Grid.Row="7"
-                                    IsVisible="False"
-                                    Text="déjà évalué">
-                                    <Label.Triggers>
-                                        <DataTrigger
-                                            Binding="{Binding RatingVisible}"
-                                            TargetType="Label"
-                                            Value="False">
-                                            <Setter Property="IsVisible" Value="True" />
-                                        </DataTrigger>
-                                    </Label.Triggers>
-                                </Label>
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="{Binding Trip.Driver.ProfilePicturePath}"
+                                            WidthRequest="50" />
+
+                                    </Frame>
+                                    <Button
+                                        Margin="40,0,0,20"
+                                        BackgroundColor="#2196F3"
+                                        Clicked="OnRateButtonClicked"
+                                        CornerRadius="5"
+                                        IsVisible="{Binding RatingVisible}"
+                                        Text="Évaluer"
+                                        TextColor="White" />
+
+                                    <!--  Label "déjà évalué"  -->
+                                    <Label
+                                        Margin="40,0,0,20"
+                                        IsVisible="False"
+                                        Text="Déjà évalué">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding RatingVisible}"
+                                                TargetType="Label"
+                                                Value="False">
+                                                <Setter Property="IsVisible" Value="True" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </StackLayout>
+
+
+
                             </Grid>
                         </Frame>
                     </DataTemplate>

@@ -37,6 +37,7 @@ namespace BipBip.Views
             {
                 int receiverId = discussion.UserIdReceiver != UserSession.Id ? discussion.UserIdReceiver : discussion.UserIdSender;
                 discussion.UserName = _dbService.GetUserByIdAsync(receiverId).Result.FirstName;
+                discussion.UserProfilePicturePath = _dbService.GetUserByIdAsync(receiverId).Result.ProfilePicturePath;
                 Discussions.Add(discussion);
             }
         }

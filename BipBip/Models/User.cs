@@ -19,6 +19,8 @@ namespace BipBip.Models
 
         public double AverageRating { get; set; }
 
+        public string ProfilePicturePath { get; set; } = "nabilz.png";
+
         public User() { }
     }
 }

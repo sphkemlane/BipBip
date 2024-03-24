@@ -24,7 +24,9 @@ namespace BipBip.Views
             _dbService = new DbService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
             _tripService = new TripService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
             _vehiculesRepo = new VehiculeRepo(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
-        }
+
+        
+    }
 
         private async void OnPublierButtonClicked(object sender, EventArgs e)
         {

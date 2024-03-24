@@ -18,7 +18,6 @@ namespace BipBip.Views
         {
             _dbService = new DbService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
             numberOfReservation = numberOfPersons;
-            sortedTrips = matchingTrips;
             depart = departure;
             destin = destination;
             date = selectedDate;
@@ -30,7 +29,14 @@ namespace BipBip.Views
             DestinationLabel.Text = destination;
             DateLabel.Text = selectedDate.ToString("d");
             NumberOfPersonsLabel.Text = numberOfPersons.ToString();
-            
+
+            foreach (var trip in matchingTrips)
+            {
+                trip.Driver = _dbService.GetUserByIdAsync(trip.DriverId).Result;
+            }
+
+            sortedTrips = matchingTrips;
+
             // Assurez-vous que votre CollectionView est liée à la liste matchingTrips
             MatchingTripsCollectionView.ItemsSource = matchingTrips;
             
@@ -60,10 +66,7 @@ namespace BipBip.Views
         private void OnRatingFilterClicked(object sender, EventArgs e)
         {
             // Appliquer le filtrage par rating du mieux noté au moins noté
-            foreach (var trip in sortedTrips)
-            {
-                trip.Driver = _dbService.GetUserByIdAsync(trip.DriverId).Result;
-            }
+            
             sortedTrips = sortedTrips.OrderByDescending(trip => trip.Driver.AverageRating).ToList();
 
             Navigation.PushAsync(new SearchResultsPage(depart, destin, date, numberOfReservation, sortedTrips));

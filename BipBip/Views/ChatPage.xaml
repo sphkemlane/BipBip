@@ -33,7 +33,7 @@
                             <Image
                                 Aspect="AspectFill"
                                 HeightRequest="50"
-                                Source="{Binding UserProfilePicture}"
+                                Source="{Binding UserProfilePicturePath}"
                                 WidthRequest="50" />
                         </Frame>
                         <!--  User Name & Last Message  -->

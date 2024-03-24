@@ -190,5 +190,16 @@
     <AndroidResource Include="Resources\drawable\star_yellow.png" />
     <AndroidResource Include="Resources\drawable\user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\check.png" />
+    <AndroidResource Include="Resources\drawable\data.png" />
+    <AndroidResource Include="Resources\drawable\Draw_car.png" />
+    <AndroidResource Include="Resources\drawable\history.png" />
+    <AndroidResource Include="Resources\drawable\pref.png" />
+    <AndroidResource Include="Resources\drawable\rightarrow.png" />
+    <AndroidResource Include="Resources\drawable\star.png" />
+    <AndroidResource Include="Resources\drawable\tall.png" />
+    <AndroidResource Include="Resources\drawable\users.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -66,10 +66,11 @@ namespace BipBip.Views
 
         private void OnEvaluateButtonClicked(object sender, EventArgs e)
         {
+            var trip = _tripService.GetTripById(reservation.TripId);
             Rating _rating = new Rating
             {
                 TripId = reservation.TripId,
-                UserId = reservation.ReserveeId,
+                UserId = trip.DriverId,
                 RatingValue = rating,
                 Comment = CommentEntry.Text
 
@@ -86,20 +87,19 @@ namespace BipBip.Views
             // ajouter le rate a average rating
             var ratingList = _ratingService.GetAllUserRatings(reservation.Trip.DriverId);
 
-            
             User driver = _dbService.GetUserByIdAsync(reservation.Trip.DriverId).Result;
-
             // Vérifier si le conducteur a des évaluations
             if (ratingList.Any())
             {
                 // Calculer la moyenne des évaluations
-                double averageRating = ratingList.Average(rating => rating.RatingValue);
-
+                double averageRating = Math.Round(ratingList.Average(rating => rating.RatingValue), 1);
                 // Mettre à jour la propriété averageRating du conducteur
                 driver.AverageRating = averageRating;
 
                 // Mettre à jour le conducteur dans la base de données
                 _dbService.UpdateUserAsync(driver);
+
+
             }
 
             // Perform evaluation based on the selected rating

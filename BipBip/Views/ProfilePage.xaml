@@ -1,93 +1,260 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BipBip.Views.ProfilePage"
-             BackgroundColor="#E8EAF6">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BipBip.Views.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:BipBip.Views"
+    BackgroundColor="#E8EAF6">
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10">
 
-                <!-- En-tête de la page avec bouton de retour -->
+                <!--  En-tête de la page avec bouton de retour  -->
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="&#x3C;" FontSize="Large" Clicked="OnBackButtonClicked"/>
-                    <Label Text="À propos de vous" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Label Text="Compte" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Button
+                        BackgroundColor="Transparent"
+                        Clicked="OnBackButtonClicked"
+                        FontSize="Large"
+                        Text="&#x3C;"
+                        TextColor="White" />
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="À propos de vous"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Label
+                        HorizontalOptions="End"
+                        Text="Compte"
+                        TextColor="White"
+                        VerticalOptions="Center" />
                 </StackLayout>
 
-                <!-- Section de la photo de profil -->
+                <!--  Section de la photo de profil  -->
                 <StackLayout Padding="15" HorizontalOptions="Center">
-                    <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                    <Frame
+                        Padding="10"
+                        BackgroundColor="White"
+                        CornerRadius="10"
+                        HasShadow="True">
                         <StackLayout HorizontalOptions="Center">
 
-                            <!--A Finir-->
-                            <Image x:Name="profileImage" HeightRequest="100" WidthRequest="100" />
 
-                            <Label x:Name="welcomeLabel" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-                            <Label Text="Débutant" HorizontalTextAlignment="Center" TextColor="Gray"/>
+                            <!--  ADD PHOTO  -->
+                            <Grid
+                                Padding="10"
+                                HorizontalOptions="FillAndExpand"
+                                RowDefinitions="*"
+                                VerticalOptions="FillAndExpand">
+
+                                <StackLayout
+                                    x:Name="sl"
+                                    Grid.Row="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Button
+                                        x:Name="btn"
+                                        BackgroundColor="#4A90E2"
+                                        Clicked="btn_Clicked"
+                                        CornerRadius="30"
+                                        Text="Upload Image"
+                                        TextColor="White" />
+                                    <Image
+                                        x:Name="img"
+                                        HeightRequest="100"
+                                        WidthRequest="100" />
+                                    <!--<Button x:Name="confirmButton" Text="Confirmer la photo" Clicked="OnConfirmButtonClicked" IsVisible="False"/>-->
+
+
+                                </StackLayout>
+
+                                <Grid
+                                    x:Name="gridImageOption"
+                                    Grid.Row="0"
+                                    Padding="20"
+                                    BackgroundColor="#e4fffc"
+                                    HorizontalOptions="FillAndExpand"
+                                    IsVisible="false"
+                                    VerticalOptions="FillAndExpand">
+                                    <Frame
+                                        CornerRadius="10"
+                                        HeightRequest="200"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Padding="0,0,0,20"
+                                                FontSize="25"
+                                                HorizontalOptions="Center"
+                                                Text="Update Image"
+                                                TextColor="Black" />
+
+                                            <control:ChoosePhotoControl
+                                                x:Name="ctrlCamera"
+                                                Grid.Row="1"
+                                                Grid.Column="0"
+                                                HorizontalOptions="Center"
+                                                IconSource="camera.png"
+                                                Text="Take Photo">
+                                                <control:ChoosePhotoControl.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="ctrlCamera_Tapped" />
+                                                </control:ChoosePhotoControl.GestureRecognizers>
+                                            </control:ChoosePhotoControl>
+                                            <control:ChoosePhotoControl
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                HorizontalOptions="Center"
+                                                IconSource="galery.png"
+                                                Text="Select from Gallary">
+                                                <control:ChoosePhotoControl.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="ctrlGallery_Tapped" />
+                                                </control:ChoosePhotoControl.GestureRecognizers>
+                                            </control:ChoosePhotoControl>
+                                            <Button
+                                                x:Name="btnCancel"
+                                                Grid.Row="3"
+                                                Grid.Column="0"
+                                                Grid.ColumnSpan="2"
+                                                Margin="0,10,0,0"
+                                                Clicked="btnCancel_Clicked"
+                                                CornerRadius="10"
+                                                Text="Cancel" />
+                                        </Grid>
+                                    </Frame>
+                                </Grid>
+
+                            </Grid>
+
+
+                            <!--  ADD PHOTO  -->
+
+                            <Label
+                                x:Name="welcomeLabel"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                TextColor="#4A90E2" />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                Text="Débutant"
+                                TextColor="Gray" />
                         </StackLayout>
                     </Frame>
-                    <Button Text="Modifier la photo de profil" Margin="5" Command="{Binding AddPhotoCommand}"/>
+                    <!--<Button Text="Modifier la photo de profil" Margin="5" Command="{Binding AddPhotoCommand}"/>-->
 
                 </StackLayout>
 
-                <!-- Section des informations personnelles -->
-                <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                <!--  Section des informations personnelles  -->
+                <Frame
+                    Margin="10"
+                    Padding="10"
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    HasShadow="True">
                     <StackLayout>
-                        <Entry Placeholder="Nom" x:Name="LabelNom" />
-                        <Entry Placeholder="Prénom" x:Name="LabelPrénom" />
-                        <Entry Placeholder="Numéro de téléphone" Text="+33 0 00 00 00 00" />
-                        <Entry Placeholder="Adresse" Text="42 Rue de la résistance, Saint Étienne" />
-                        <Entry Placeholder="User ID" Text="RANDOM_212" IsEnabled="False" />
+                        <Entry
+                            x:Name="LabelNom"
+                            Margin="5"
+                            BackgroundColor="#E8EAF6"
+                            Placeholder="Nom" />
+                        <Entry
+                            x:Name="LabelPrénom"
+                            Margin="5"
+                            BackgroundColor="#E8EAF6"
+                            Placeholder="Prénom" />
+                        <Entry
+                            x:Name="LabelTel"
+                            Margin="5"
+                            BackgroundColor="#E8EAF6"
+                            Placeholder="Numéro de téléphone"
+                            Text="+33 7 63 45 60 69" />
+                        <Entry
+                            Margin="5"
+                            BackgroundColor="#E8EAF6"
+                            Placeholder="Adresse"
+                            Text="42 Rue de la résistance, Saint Étienne" />
                     </StackLayout>
                 </Frame>
 
-                <!-- Section de l'email et du mot de passe -->
-                <Frame BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                <!--  Section de l'email et du mot de passe  -->
+                <Frame
+                    Margin="10"
+                    Padding="10"
+                    BackgroundColor="White"
+                    CornerRadius="10"
+                    HasShadow="True">
                     <StackLayout>
-                        <Label x:Name="LabelEmail"/>
+                        <Label x:Name="LabelEmail" />
                         <Label Text="Mot de passe: ********" />
                     </StackLayout>
                 </Frame>
 
-                <!-- Boutons de vérification -->
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Button Text="Vérifier une pièce d'identité" />
-                    <Label Text="✓" TextColor="Green" FontSize="Large" VerticalOptions="Center"/>
-                </StackLayout>
+
 
                 <StackLayout Padding="15" Spacing="10">
 
 
                     <StackLayout Orientation="Horizontal" Spacing="10">
-                        <Button Text="+" Command="{Binding AddBioCommand}" />
-                        <!--<Label Text="Ajouter une minibio" VerticalOptions="Center" />-->
+                        <Button
+                            BackgroundColor="#4A90E2"
+                            Command="{Binding AddBioCommand}"
+                            CornerRadius="20"
+                            Text="Ajouter une minibio"
+                            TextColor="White" />
 
-                        <Label  Text="{Binding UserBio}" />
+                        <Label Text="{Binding UserBio}" />
 
-                        <!-- Assurez-vous de lier AddBioCommand à une commande dans votre ViewModel -->
+                        <!--  Assurez-vous de lier AddBioCommand à une commande dans votre ViewModel  -->
                     </StackLayout>
 
 
 
                 </StackLayout>
-                
-                
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
-                    <!-- Bouton pour ajouter une voiture -->
-                    <ImageButton Source="cariconpng25.png" WidthRequest="60" HeightRequest="60" Clicked="OnAddCarButtonClicked" />
 
-                    <!-- Bouton pour accéder aux préférences -->
-                    <ImageButton Source="hobbiesicon3.png" WidthRequest="60" HeightRequest="60" Clicked="OnPreferencesButtonClicked" />
+
+                <StackLayout
+                    Margin="10"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <!--  Bouton pour ajouter une voiture  -->
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Clicked="OnAddCarButtonClicked"
+                        HeightRequest="70"
+                        Source="Draw_car.png"
+                        WidthRequest="70" />
+
+                    <!--  Bouton pour accéder aux préférences  -->
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Clicked="OnPreferencesButtonClicked"
+                        HeightRequest="70"
+                        Source="pref.png"
+                        WidthRequest="70" />
                 </StackLayout>
 
 
 
 
-                <!-- Bouton pour enregistrer les modifications -->
-                <Button Text="Enregistrer les modifications" Margin="10"/>
+                <!--  Bouton pour enregistrer les modifications  -->
+                <Button
+                    Margin="10"
+                    Padding="10"
+                    BackgroundColor="#4A90E2"
+                    Clicked="OnSaveButtonClicked"
+                    CornerRadius="20"
+                    Text="Enregistrer les modifications"
+                    TextColor="White" />
 
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>
+
+

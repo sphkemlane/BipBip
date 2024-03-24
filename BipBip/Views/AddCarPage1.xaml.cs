@@ -15,7 +15,7 @@ namespace BipBip.Views
         private void OnNextButtonClicked(object sender, EventArgs e)
         {
             string immatriculationValue = ImmatriculationEntry.Text;
-                                        
+
             // Stockez la valeur dans l'objet Vehicule
             _vehicule.Immatriculation = immatriculationValue;
 

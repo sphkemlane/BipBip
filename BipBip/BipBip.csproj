@@ -70,9 +70,6 @@
     <EmbeddedResource Update="Views\pref.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ProfilePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\RegidterPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -95,6 +92,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ChatDetailPage.xaml.cs">
       <DependentUpon>ChatDetailPage.xaml</DependentUpon>
     </Compile>

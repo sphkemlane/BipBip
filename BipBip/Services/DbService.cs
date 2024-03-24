@@ -79,6 +79,26 @@ namespace BipBip.Services
         }
 
 
+        public async Task<bool> UpdateUserInformationAsync(int userId, string name, string firstName, string phoneNumber)
+        {
+            var user = await _connection.Table<User>().Where(x => x.Id == userId).FirstOrDefaultAsync();
+            if (user != null)
+            {
+                // Mise à jour des informations de l'utilisateur
+                user.Name = name;
+                user.FirstName = firstName;
+                user.phoneNumber = phoneNumber;
+
+                // Mise à jour de l'utilisateur dans la base de données
+                var updateResult = await _connection.UpdateAsync(user);
+                return updateResult > 0; // Retourne true si la mise à jour a été effectuée
+            }
+
+            return false; // Retourne false si l'utilisateur n'a pas été trouvé
+        }
+
+
+
         public Task<List<Discussion>> GetDiscussionsAsync(int userId)
         {
             return _connection.Table<Discussion>()

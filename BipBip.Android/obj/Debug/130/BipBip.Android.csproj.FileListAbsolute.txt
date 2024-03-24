@@ -5120,3 +5120,12 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_Gene
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\historique.jpg
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\profil.jpg
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\check.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\data.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\draw_car.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\history.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\pref.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\rightarrow.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\star.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\tall.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\users.png
