@@ -25,7 +25,10 @@ namespace BipBip.Views
 
             //initialisation mta3 el db
             database = new DbService(DependencyService.Get<IFileHelper>().GetLocalFilePath("Users.db3"));
+
         }
+
+
 
         private async void OnLabelTapped(object sender, EventArgs e) 
         {

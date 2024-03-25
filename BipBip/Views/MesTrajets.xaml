@@ -111,7 +111,7 @@
                                     Grid.ColumnSpan="2"
                                     HorizontalOptions="Start"
                                     Orientation="Horizontal"
-                                    Spacing="10"
+                                    Spacing="-80"
                                     VerticalOptions="End">
                                     <StackLayout
                                         Orientation="Vertical"
@@ -181,7 +181,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame
-                            Margin="10"
+                            Margin="20"
                             BackgroundColor="White"
                             BorderColor="DarkGray"
                             CornerRadius="50"
@@ -308,7 +308,7 @@
 
                                     <Frame
                                         Grid.Row="1"
-                                        Margin="-140,-25,40,0"
+                                        Margin="-240,-25,40,0"
                                         Padding="0"
                                         BorderColor="Aqua"
                                         CornerRadius="90"

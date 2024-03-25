@@ -238,7 +238,14 @@
                         WidthRequest="70" />
                 </StackLayout>
 
-
+                <Button
+                    Margin="10"
+                    Padding="10"
+                    BackgroundColor="#4A90E2"
+                    Clicked="OnDClicked"
+                    CornerRadius="20"
+                    Text="Se Déconnecter"
+                    TextColor="White" />
 
 
                 <!--  Bouton pour enregistrer les modifications  -->

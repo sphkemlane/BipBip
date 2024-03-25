@@ -173,6 +173,12 @@ namespace BipBip.Views
             await Navigation.PushAsync(new PreferencesPage());
         }
 
+        private async void OnDClicked(object sender, EventArgs e)
+        {
+            UserSession.EndSession();
+            await Navigation.PushAsync(new ConnexionPage());
+        }
+
 
         private async void OnSaveButtonClicked(object sender, EventArgs e)
         {

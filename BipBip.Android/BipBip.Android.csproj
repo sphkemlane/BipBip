@@ -163,7 +163,7 @@
     <AndroidResource Include="Resources\drawable\twitter.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nabilz.PNG" />
+    <AndroidResource Include="Resources\drawable\Nabil.PNG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\historique.png" />
@@ -200,6 +200,17 @@
     <AndroidResource Include="Resources\drawable\star.png" />
     <AndroidResource Include="Resources\drawable\tall.png" />
     <AndroidResource Include="Resources\drawable\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\usualUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Aymen.jpg" />
+    <AndroidResource Include="Resources\drawable\Labid.jpg" />
+    <AndroidResource Include="Resources\drawable\Mohamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Saad.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

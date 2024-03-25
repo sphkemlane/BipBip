@@ -4406,7 +4406,6 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawabl
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\fb.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\instagram.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\twitter.png
-C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\nabilz.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\historique.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\home.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\messages.png
@@ -5129,3 +5128,9 @@ C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawabl
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\star.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\tall.png
 C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\users.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\usualuser.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\nabil.png
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\aymen.jpg
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\labid.jpg
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\mohamed.jpg
+C:\Users\Saad KEMLANE\Desktop\GL\BipBip\BipBip.Android\obj\Debug\130\res\drawable\saad.jpg

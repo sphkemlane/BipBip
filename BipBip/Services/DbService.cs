@@ -24,17 +24,18 @@ namespace BipBip.Services
             return _connection.Table<User>().ToListAsync();
         }
 
-        public Task<int> SaveUserAsync(User user)
+        public async Task<int> SaveUserAsync(User user)
         {
             if (user.Id == 0)
             {
-                return _connection.InsertAsync(user);
+                return await _connection.InsertAsync(user);
             }
             else
             {
-                return _connection.UpdateAsync(user);
+                return await _connection.UpdateAsync(user);
             }
         }
+
 
         public Task<User> GetUserByEmailAsync(string email)
         {
@@ -64,7 +65,7 @@ namespace BipBip.Services
         public async Task DeleteAllTablesAsync()
         {
             // Liste de toutes les tables que vous souhaitez supprimer
-            string[] tablesToDelete = { "Reservation", "Trip", "User", "Vehicule", "Message", "Discussion", "Rating" }; // Ajoutez ici toutes les tables que vous avez dans votre base de données
+            string[] tablesToDelete = { "Reservation", "User", "Trip", "Vehicule", "Message", "Discussion", "Rating" }; // Ajoutez ici toutes les tables que vous avez dans votre base de données
 
             foreach (var table in tablesToDelete)
             {
